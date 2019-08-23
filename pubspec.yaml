@@ -1,0 +1,43 @@
+name: carpool
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+  font_awesome_flutter:
+  google_maps_flutter:
+  location_permissions:
+  permission_handler:
+  sliding_up_panel:
+  place_picker:
+  get_it:
+  http:
+  intl:
+  oktoast:
+  provider:
+  geolocator:
+  shared_preferences:
+  flutter_datetime_picker:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family : Nunito
+      fonts:
+        - asset: fonts/Nunito-Regular.ttf
+        - asset: fonts/Nunito-Bold.ttf
+          weight: 700
+
+  assets:
+    - images/

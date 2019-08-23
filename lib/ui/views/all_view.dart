@@ -1,0 +1,10 @@
+export 'account_tab_view.dart';
+export 'home_view.dart';
+export 'login_view.dart';
+export 'order_later_view.dart';
+export 'order_now_view.dart';
+export 'pick_destination_view.dart';
+export 'pick_origin_view.dart';
+export 'register_view.dart';
+export 'trip_summary_view.dart';
+export 'trip_view.dart';

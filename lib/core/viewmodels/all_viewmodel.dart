@@ -1,0 +1,9 @@
+export 'account_tab_model.dart';
+export 'history_tab_model.dart';
+export 'order_later_model.dart';
+export 'pick_destination_model.dart';
+export 'pick_origin_model.dart';
+export 'register_model.dart';
+export 'root_model.dart';
+export 'trip_model.dart';
+export 'trip_summary_model.dart';
