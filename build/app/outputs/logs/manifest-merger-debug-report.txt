@@ -1,17 +1,17 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:1:1-39:12
-INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:1:1-39:12
-INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:1:1-39:12
-INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:1:1-39:12
-MERGED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:1:1-39:12
-MERGED from [:location] /Users/Andhea/Documents/GitHub/carpool-flutter/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-10:12
-MERGED from [:shared_preferences] /Users/Andhea/Documents/GitHub/carpool-flutter/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:location_permissions] /Users/Andhea/Documents/GitHub/carpool-flutter/build/location_permissions/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:permission_handler] /Users/Andhea/Documents/GitHub/carpool-flutter/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:google_maps_flutter] /Users/Andhea/Documents/GitHub/carpool-flutter/build/google_maps_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:geolocator] /Users/Andhea/Documents/GitHub/carpool-flutter/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:google_api_availability] /Users/Andhea/Documents/GitHub/carpool-flutter/build/google_api_availability/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:1:1-39:12
+INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:1:1-39:12
+INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:1:1-39:12
+INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:1:1-39:12
+MERGED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:1:1-39:12
+MERGED from [:location] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-10:12
+MERGED from [:shared_preferences] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:location_permissions] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/location_permissions/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:permission_handler] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:google_maps_flutter] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:geolocator] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:google_api_availability] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_api_availability/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-location:16.0.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-location-16.0.0.aar/faef184ff783989bd513ba30628b1741/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.multidex:multidex:2.0.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/multidex-2.0.0.aar/8c04d435f2080b53bbb084e65e8b48b1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/0b29cc08083de25ad323aae86b3655fe/AndroidManifest.xml:17:1-38:12
@@ -44,25 +44,25 @@ MERGED from [androidx.print:print:1.0.0] /Users/Andhea/.gradle/caches/transforms
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/392827273b7c493f300e14621938dd4f/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/ad8ebcf230abf3b19fdb41172458149d/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/434adcbe1ced5e5457a8c668d0c19907/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/debug/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/debug/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 	package
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:2:5-34
-		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/debug/AndroidManifest.xml
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:2:5-34
+		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/debug/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:1:1-39:12
-		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:1:1-39:12
+		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/debug/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:1:1-39:12
-		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:1:1-39:12
+		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:1:11-69
 application
-ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:9:5-36:19
+ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:9:5-36:19
 MERGED from [com.google.android.gms:play-services-location:16.0.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-location-16.0.0.aar/faef184ff783989bd513ba30628b1741/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:16.0.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-location-16.0.0.aar/faef184ff783989bd513ba30628b1741/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/0b29cc08083de25ad323aae86b3655fe/AndroidManifest.xml:30:5-36:19
@@ -82,87 +82,87 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/Andh
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.2] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.2.aar/de5dbc79f499f283cafeaec2dbf5cb47/AndroidManifest.xml:22:18-86
 	android:label
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:11:9-32
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:11:9-32
 	android:icon
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:12:9-43
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:12:9-43
 	android:name
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:10:9-57
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:10:9-57
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:13:9-15:71
+ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:13:9-15:71
 	android:value
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:15:13-68
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:15:13-68
 	android:name
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:14:13-58
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:14:13-58
 activity#com.example.carpool.MainActivity
-ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:16:9-34:20
+ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:16:9-34:20
 	android:launchMode
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:18:13-43
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:18:13-43
 	android:hardwareAccelerated
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:21:13-47
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:21:13-47
 	android:windowSoftInputMode
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:22:13-55
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:22:13-55
 	android:configChanges
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:20:13-144
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:20:13-144
 	android:theme
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:19:13-47
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:19:13-47
 	android:name
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:17:13-41
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:17:13-41
 meta-data#io.flutter.app.android.SplashScreenUntilFirstFrame
-ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:27:13-29:40
+ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:27:13-29:40
 	android:value
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:29:17-37
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:29:17-37
 	android:name
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:28:17-82
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:28:17-82
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:30:13-33:29
+ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:30:13-33:29
 action#android.intent.action.MAIN
-ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:31:17-68
+ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:31:17-68
 	android:name
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:31:25-66
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:32:17-76
+ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:32:17-76
 	android:name
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:32:27-74
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:32:27-74
 uses-library#org.apache.http.legacy
-ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:35:9-87
+ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:35:9-87
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/0b29cc08083de25ad323aae86b3655fe/AndroidManifest.xml:33:9-35:40
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/0b29cc08083de25ad323aae86b3655fe/AndroidManifest.xml:33:9-35:40
 	android:required
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:35:61-85
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:35:61-85
 	android:name
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:35:23-60
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:35:23-60
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:37:5-79
-MERGED from [:location] /Users/Andhea/Documents/GitHub/carpool-flutter/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-79
-MERGED from [:location] /Users/Andhea/Documents/GitHub/carpool-flutter/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-79
-MERGED from [:geolocator] /Users/Andhea/Documents/GitHub/carpool-flutter/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
-MERGED from [:geolocator] /Users/Andhea/Documents/GitHub/carpool-flutter/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
+ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:37:5-79
+MERGED from [:location] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-79
+MERGED from [:location] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-79
+MERGED from [:geolocator] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
+MERGED from [:geolocator] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
 	android:name
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:37:22-76
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:37:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:38:5-81
-MERGED from [:location] /Users/Andhea/Documents/GitHub/carpool-flutter/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
-MERGED from [:location] /Users/Andhea/Documents/GitHub/carpool-flutter/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
+ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:38:5-81
+MERGED from [:location] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
+MERGED from [:location] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-81
 	android:name
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml:38:22-78
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml:38:22-78
 uses-sdk
-INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml
-INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml
-MERGED from [:location] /Users/Andhea/Documents/GitHub/carpool-flutter/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:location] /Users/Andhea/Documents/GitHub/carpool-flutter/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:shared_preferences] /Users/Andhea/Documents/GitHub/carpool-flutter/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:shared_preferences] /Users/Andhea/Documents/GitHub/carpool-flutter/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:location_permissions] /Users/Andhea/Documents/GitHub/carpool-flutter/build/location_permissions/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:location_permissions] /Users/Andhea/Documents/GitHub/carpool-flutter/build/location_permissions/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:permission_handler] /Users/Andhea/Documents/GitHub/carpool-flutter/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:permission_handler] /Users/Andhea/Documents/GitHub/carpool-flutter/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:google_maps_flutter] /Users/Andhea/Documents/GitHub/carpool-flutter/build/google_maps_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:google_maps_flutter] /Users/Andhea/Documents/GitHub/carpool-flutter/build/google_maps_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:geolocator] /Users/Andhea/Documents/GitHub/carpool-flutter/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:geolocator] /Users/Andhea/Documents/GitHub/carpool-flutter/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:google_api_availability] /Users/Andhea/Documents/GitHub/carpool-flutter/build/google_api_availability/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:google_api_availability] /Users/Andhea/Documents/GitHub/carpool-flutter/build/google_api_availability/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml
+MERGED from [:location] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:location] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/location/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:location_permissions] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/location_permissions/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:location_permissions] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/location_permissions/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:google_maps_flutter] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:google_maps_flutter] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:geolocator] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:geolocator] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:google_api_availability] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_api_availability/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:google_api_availability] /Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_api_availability/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:16.0.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-location-16.0.0.aar/faef184ff783989bd513ba30628b1741/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:16.0.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-location-16.0.0.aar/faef184ff783989bd513ba30628b1741/AndroidManifest.xml:5:5-44
 MERGED from [androidx.multidex:multidex:2.0.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/multidex-2.0.0.aar/8c04d435f2080b53bbb084e65e8b48b1/AndroidManifest.xml:20:5-43
@@ -227,20 +227,20 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/Andhea/.gradle/c
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/ad8ebcf230abf3b19fdb41172458149d/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/434adcbe1ced5e5457a8c668d0c19907/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.0.0.aar/434adcbe1ced5e5457a8c668d0c19907/AndroidManifest.xml:20:5-44
-INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/debug/AndroidManifest.xml
-INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/debug/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/debug/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/debug/AndroidManifest.xml:6:5-66
+ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/debug/AndroidManifest.xml:6:5-66
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/0b29cc08083de25ad323aae86b3655fe/AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:16.1.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/0b29cc08083de25ad323aae86b3655fe/AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter/android/app/src/debug/AndroidManifest.xml:6:22-64
+		ADDED from /Users/Andhea/Documents/GitHub/carpool-flutter-customer/android/app/src/debug/AndroidManifest.xml:6:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.android.gms:play-services-maps:16.1.0] /Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/0b29cc08083de25ad323aae86b3655fe/AndroidManifest.xml:23:5-79
 	android:name
