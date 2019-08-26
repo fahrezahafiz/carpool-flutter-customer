@@ -274,4 +274,15 @@ class Api {
       return false;
     }
   }
+
+  Future<bool> cancelOrder(String tripId) async {
+    String url = restApiBaseUrl + 'user/trip/delete?_id=$tripId';
+
+    http.Response response = await http.delete(url);
+    print('@Api.cancelOrder: status code ${response.statusCode}');
+    if (response.statusCode == 200)
+      return true;
+    else
+      return false;
+  }
 }

@@ -5,7 +5,8 @@ enum TripState { WaitingForApproval, FindingDriver, OnTheWay, Finished }
 
 class Trip {
   String _id;
-  String idDriver;
+  String driverId;
+  String driverName;
   String idVehicle;
   List<Map<String, dynamic>> users;
   TripState status;
@@ -30,7 +31,8 @@ class Trip {
 
   Trip.fromJson(Map<String, dynamic> json) {
     this._id = json['_id'];
-    this.idDriver = json['id_driver'];
+    this.driverId = json['driver']['id'];
+    this.driverName = json['driver']['name'];
     this.idVehicle = json['id_vehicle'];
     this.users = List<Map<String, dynamic>>();
     for (var user in json['users']) {

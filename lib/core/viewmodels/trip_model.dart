@@ -60,6 +60,7 @@ class TripModel extends BaseModel {
 
   void moveToUserLocation() {
     _tripService.moveToUserLocation();
+    notifyListeners();
   }
 
   void setMarkers() {
@@ -92,6 +93,12 @@ class TripModel extends BaseModel {
     mapController
         .animateCamera(CameraUpdate.newLatLngBounds(direction.bounds, 50));
     notifyListeners();
+  }
+
+  Future<void> cancelOrder(context) async {
+    await _api.cancelOrder(trip.id).then((success) {
+      if (success) Navigator.pop(context);
+    });
   }
 
   void stop() => _periodic.cancel();

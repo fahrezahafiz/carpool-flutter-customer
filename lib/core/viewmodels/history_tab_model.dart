@@ -14,6 +14,7 @@ class HistoryTabModel extends BaseModel {
 
   Future<void> init() async {
     setBusy(true);
+    print('@HistoryTabModel.init: init');
     _trips = await _api.getTripFor(_authenticationService.currentUser.id);
     setBusy(false);
   }

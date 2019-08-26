@@ -3,10 +3,11 @@ import 'package:carpool/core/viewmodels/trip_model.dart';
 import 'package:carpool/ui/shared/custom_fab.dart';
 import 'package:carpool/ui/shared/ui_helper.dart';
 import 'package:carpool/ui/views/base_view.dart';
+import 'package:carpool/ui/widgets/finding_driver.dart';
+import 'package:carpool/ui/widgets/on_the_way.dart';
 import 'package:carpool/ui/widgets/waiting_for_approval.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:provider/provider.dart';
 
 class TripView extends StatelessWidget {
   final String tripId;
@@ -64,82 +65,6 @@ class TripView extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class FindingDriver extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final model = Provider.of<TripModel>(context);
-    return SafeArea(
-      child: Stack(
-        children: <Widget>[
-          Align(
-            alignment: Alignment.topLeft,
-            child: CustomFAB(
-              child: Icon(Icons.arrow_back),
-              onTap: () {
-                model.stop();
-                Navigator.pop(context);
-              },
-            ),
-          ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                CircularProgressIndicator(),
-                UIHelper.vSpaceMedium(),
-                Text(
-                  'Finding a driver...',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black54,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class OnTheWay extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final model = Provider.of<TripModel>(context);
-    return SafeArea(
-      child: Stack(
-        children: <Widget>[
-          Container(
-            height: UIHelper.safeBlockVertical * 90,
-            child: GoogleMap(
-              polylines: model.polyLines,
-              markers: model.markers,
-              myLocationEnabled: true,
-              myLocationButtonEnabled: false,
-              initialCameraPosition:
-                  model.userPosition ?? model.defaultPosition,
-              onMapCreated: (controller) {
-                model.setMapController = controller;
-                model.getDirection();
-              },
-            ),
-          ),
-          //PickOriginSheet(),
-          CustomFAB(
-            child: Icon(Icons.arrow_back),
-            onTap: () {
-              model.stop();
-              Navigator.pop(context);
-            },
-          ),
-        ],
       ),
     );
   }

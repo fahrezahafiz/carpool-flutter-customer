@@ -1,5 +1,6 @@
 import 'package:carpool/core/viewmodels/trip_model.dart';
 import 'package:carpool/ui/shared/compact_button.dart';
+import 'package:carpool/ui/shared/confirm_dialog.dart';
 import 'package:carpool/ui/shared/ui_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -13,7 +14,7 @@ class WaitingForApproval extends StatelessWidget {
       child: Wrap(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.symmetric(vertical: 24, horizontal: 20),
+            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.vertical(top: Radius.circular(14)),
@@ -26,23 +27,30 @@ class WaitingForApproval extends StatelessWidget {
               ],
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Center(
-                  child: Text(
-                    'Waiting for approval...',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
+                Text(
+                  'Waiting for approval...',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
                 UIHelper.vSpaceSmall(),
-                Center(
-                  child: CompactButton(
-                    child: Text(
-                      'Cancel order',
-                      style: TextStyle(
-                          color: Colors.red, fontWeight: FontWeight.bold),
+                CompactButton(
+                  padding: EdgeInsets.all(4),
+                  child: Text(
+                    'Cancel order',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
                     ),
-                    onTap: () {},
+                  ),
+                  onTap: () => showDialog(
+                    context: context,
+                    builder: (context) => ConfirmDialog(
+                      title: 'Cancel Order',
+                      content: 'Anda yakin mau cancel order ini?',
+                      onConfirm: () => model.cancelOrder(context),
+                    ),
                   ),
                 ),
               ],
