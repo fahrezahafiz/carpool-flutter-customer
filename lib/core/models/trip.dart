@@ -18,6 +18,8 @@ class Trip {
   bool isPrivate;
   String polyLine;
   DateTime createdAt;
+  int code;
+  int nearbyDrivers;
 
   Trip()
       : destinations = [],
@@ -62,6 +64,8 @@ class Trip {
     this.totalDistance = totalDistanceInt.toDouble();
     this.isPrivate = json['is_private'];
     this.createdAt = DateTime.parse(json['created_at']);
+    this.code = json['code'];
+    this.nearbyDrivers = json['nearby_drivers'];
   }
 
   Map<String, dynamic> toJson() => {

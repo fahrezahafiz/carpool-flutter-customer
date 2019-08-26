@@ -83,7 +83,7 @@ class TripTile extends StatelessWidget {
                   ),
                   UIHelper.vSpaceXSmall(),
                   Text(
-                    DateFormat.yMMMMd().format(trip.createdAt),
+                    DateFormat.yMMMd().format(trip.schedule),
                     style: TextStyle(color: Colors.black54),
                   )
                 ],

@@ -148,7 +148,10 @@ class OnTheWay extends StatelessWidget {
           //PickOriginSheet(),
           CustomFAB(
             child: Icon(Icons.arrow_back),
-            onTap: () => Navigator.pop(context),
+            onTap: () {
+              model.stop();
+              Navigator.pop(context);
+            },
           ),
         ],
       ),

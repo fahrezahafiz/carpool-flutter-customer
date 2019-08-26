@@ -38,6 +38,10 @@ class TripModel extends BaseModel {
     _periodic = Timer.periodic(Duration(seconds: 2), (time) async {
       print('tick ${time.tick}');
       _trip = await _api.getTripById(tripId);
+      if (_trip.status == TripState.FindingDriver && _trip.nearbyDrivers > 0)
+        print('Nearby drivers: ${_trip.nearbyDrivers}');
+      else if (_trip.status == TripState.FindingDriver &&
+          _trip.nearbyDrivers == 0) print('No nearby drivers.');
       if (_trip.status == TripState.Finished) stop();
       notifyListeners();
       print('${_trip.status}');
