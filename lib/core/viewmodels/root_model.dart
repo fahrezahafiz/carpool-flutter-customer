@@ -1,8 +1,8 @@
+import 'package:carpool/core/models/user.dart';
+import 'package:carpool/core/services/authentication_service.dart';
 import 'package:carpool/core/viewmodels/base_model.dart';
 import 'package:carpool/locator.dart';
-import 'package:carpool/core/services/authentication_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:carpool/core/models/user.dart';
 
 enum AuthState { Uninitialized, NotLoggedIn, LoggedIn }
 
@@ -30,6 +30,7 @@ class RootModel extends BaseModel {
       print(
           '@AuthService.initialCheck: no login creds found. onto RegisterView.');
     }
+    notifyListeners();
   }
 
   Future<void> login(String email, String password) async {
@@ -49,8 +50,11 @@ class RootModel extends BaseModel {
   }
 
   Future<void> logout() async {
+    SharedPreferences _pref = await SharedPreferences.getInstance();
     setBusy(true);
     await _authService.logout(currentUser.id);
+    _pref.remove(emailKey);
+    _pref.remove(passKey);
     _state = AuthState.NotLoggedIn;
     notifyListeners();
     setBusy(false);

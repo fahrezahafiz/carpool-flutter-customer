@@ -1,13 +1,11 @@
-import 'package:carpool/core/services/authentication_service.dart';
 import 'package:carpool/core/viewmodels/root_model.dart';
+import 'package:carpool/locator.dart';
 import 'package:carpool/ui/router.dart';
+import 'package:carpool/ui/views/base_view.dart';
 import 'package:carpool/ui/views/home_view.dart';
 import 'package:carpool/ui/views/login_view.dart';
 import 'package:flutter/material.dart';
 import 'package:oktoast/oktoast.dart';
-import 'package:carpool/locator.dart';
-import 'package:provider/provider.dart';
-import 'package:carpool/ui/views/base_view.dart';
 
 void main() {
   setupLocator();
@@ -25,6 +23,7 @@ class MyApp extends StatelessWidget {
       backgroundColor: Colors.black54,
       radius: 100,
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           appBarTheme: AppBarTheme(

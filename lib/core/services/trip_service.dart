@@ -35,6 +35,8 @@ class TripService {
   Direction get direction => _direction;
   User get currentUser => _authenticationService.currentUser;
 
+  set setCurrentTrip(Trip trip) => _currentTrip = trip;
+
   set setMapController(GoogleMapController controller) =>
       _mapController = controller;
 
@@ -104,6 +106,22 @@ class TripService {
       encodedPoly: result['routes'][0]['overview_polyline']['points'],
       bounds: result['routes'][0]['bounds'],
     );
+    sortDestinations(result['geocoded_waypoints']);
+  }
+
+  void sortDestinations(List<dynamic> wayPoints) {
+    List<LocationResult> newDestinationList = List<LocationResult>();
+    for (Map<String, dynamic> wayPoint in wayPoints) {
+      try {
+        LocationResult dest = _currentTrip.destinations
+            .firstWhere((dest) => dest.placeId == wayPoint['place_id']);
+        newDestinationList.add(dest);
+      } catch (e) {
+        print(
+            '@TripService.sortDestinations: placeId ${wayPoint['place_id']} not found in destination List.');
+      }
+    }
+    _currentTrip.destinations = newDestinationList;
   }
 
   Future<LatLng> getFinalDestinationLatLng() async {
@@ -123,8 +141,8 @@ class TripService {
         max = element['distance']['value'];
         finalDestinationAddress = result['destination_addresses'][index];
         _direction.distanceAndDuration(element);
-        ++index;
       }
+      ++index;
     }
 
     finalDestination = destinations
