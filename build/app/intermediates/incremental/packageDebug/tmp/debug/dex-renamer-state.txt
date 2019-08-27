@@ -1,4 +1,4 @@
-#Fri Aug 23 23:57:08 WIB 2019
+#Mon Aug 26 22:52:43 WIB 2019
 base.0=/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/app/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

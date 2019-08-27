@@ -57,6 +57,21 @@
             ]
         },
         {
+            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/app/intermediates/res/merged/debug/values-en-rAU_values-en-rAU.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.2.aar/de5dbc79f499f283cafeaec2dbf5cb47/res/values-en-rAU/values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/app/intermediates/res/merged/debug/values-fr-rCA_values-fr-rCA.arsc.flat",
             "map": [
                 {
@@ -108,21 +123,6 @@
                         "startOffsets": "3006",
                         "endColumns": "100",
                         "endOffsets": "3102"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/app/intermediates/res/merged/debug/values-en-rAU_values-en-rAU.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.2.aar/de5dbc79f499f283cafeaec2dbf5cb47/res/values-en-rAU/values-en-rAU.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
                     }
                 }
             ]
