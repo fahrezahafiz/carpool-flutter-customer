@@ -31,8 +31,8 @@ class Trip {
 
   Trip.fromJson(Map<String, dynamic> json) {
     this._id = json['_id'];
-    this.driverId = json['driver']['id'];
-    this.driverName = json['driver']['name'];
+    //this.driverId = json['driver']['id'] ?? '';
+    //this.driverName = json['driver']['name'] ?? '';
     this.idVehicle = json['id_vehicle'];
     this.users = List<Map<String, dynamic>>();
     for (var user in json['users']) {
