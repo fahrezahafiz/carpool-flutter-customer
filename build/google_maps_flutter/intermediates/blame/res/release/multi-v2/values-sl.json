@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter/build/google_maps_flutter/intermediates/incremental/mergeReleaseResources/merged.dir/values-sl/values-sl.xml",
+            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/incremental/mergeReleaseResources/merged.dir/values-sl/values-sl.xml",
             "map": [
                 {
                     "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/values-sl/values.xml",
@@ -57,7 +57,7 @@
             ]
         },
         {
-            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter/build/google_maps_flutter/intermediates/res/merged/release/values-sl/values-sl.xml",
+            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/values-sl/values-sl.xml",
             "map": [
                 {
                     "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/values-sl/values.xml",

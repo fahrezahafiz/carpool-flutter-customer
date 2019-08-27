@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter/build/geolocator/intermediates/res/merged/release/values-v21/values-v21.xml",
+            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/res/merged/release/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/9343ca8c65fbe572b989277d15f0468a/res/values-v21/values-v21.xml",
@@ -44,7 +44,7 @@
             ]
         },
         {
-            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter/build/geolocator/intermediates/incremental/mergeReleaseResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/incremental/mergeReleaseResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/9343ca8c65fbe572b989277d15f0468a/res/values-v21/values-v21.xml",

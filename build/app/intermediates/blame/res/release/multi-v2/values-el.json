@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values-el/values-el.xml",
+            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values-el/values-el.xml",
             "map": [
                 {
                     "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/values-el/values.xml",

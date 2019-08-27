@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter/build/location/intermediates/res/merged/release/values-pt/values-pt.xml",
+            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/location/intermediates/res/merged/release/values-pt/values-pt.xml",
             "map": [
                 {
                     "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/4ee5cfb945fd23fce68589a333681a76/res/values-pt/values-pt.xml",
@@ -16,7 +16,7 @@
             ]
         },
         {
-            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter/build/location/intermediates/incremental/mergeReleaseResources/merged.dir/values-pt/values-pt.xml",
+            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/location/intermediates/incremental/mergeReleaseResources/merged.dir/values-pt/values-pt.xml",
             "map": [
                 {
                     "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/4ee5cfb945fd23fce68589a333681a76/res/values-pt/values-pt.xml",
