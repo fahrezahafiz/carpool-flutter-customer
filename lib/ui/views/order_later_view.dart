@@ -85,31 +85,35 @@ class OrderLaterView extends StatelessWidget {
                 ],
               ),
               UIHelper.vSpaceXSmall(),
-              Text('Durasi dalam hari',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.black54)),
+              model.isDinas
+                  ? Text('Durasi dalam hari',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.black54))
+                  : Container(),
               UIHelper.vSpaceXSmall(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  CompactButton(
-                    child: Icon(Icons.remove, color: Colors.black54),
-                    onTap: () => model.subtractDuration(),
-                  ),
-                  UIHelper.hSpaceSmall(),
-                  Container(
-                    child: Text(
-                      model.duration.toString(),
-                      style: TextStyle(fontSize: 20, color: Colors.green),
-                    ),
-                  ),
-                  UIHelper.hSpaceSmall(),
-                  CompactButton(
-                    child: Icon(Icons.add, color: Colors.black54),
-                    onTap: () => model.addDuration(),
-                  ),
-                ],
-              ),
+              model.isDinas
+                  ? Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        CompactButton(
+                          child: Icon(Icons.remove, color: Colors.black54),
+                          onTap: () => model.subtractDuration(),
+                        ),
+                        UIHelper.hSpaceSmall(),
+                        Container(
+                          child: Text(
+                            model.duration.toString(),
+                            style: TextStyle(fontSize: 20, color: Colors.green),
+                          ),
+                        ),
+                        UIHelper.hSpaceSmall(),
+                        CompactButton(
+                          child: Icon(Icons.add, color: Colors.black54),
+                          onTap: () => model.addDuration(),
+                        ),
+                      ],
+                    )
+                  : Container(),
             ],
           ),
         ),
