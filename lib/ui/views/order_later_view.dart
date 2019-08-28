@@ -39,10 +39,12 @@ class OrderLaterView extends StatelessWidget {
                     )),
                   ),
                   onTap: () => showDatePicker(
-                      context: context,
-                      initialDate: DateTime.now().add(Duration(minutes: 10)),
-                      firstDate: DateTime.now(),
-                      lastDate: DateTime.now().add(Duration(days: 7)))),
+                          context: context,
+                          initialDate:
+                              DateTime.now().add(Duration(minutes: 10)),
+                          firstDate: DateTime.now(),
+                          lastDate: DateTime.now().add(Duration(days: 7)))
+                      .then((date) => model.setDate = date)),
               UIHelper.vSpaceSmall(),
               Text('WAKTU JEMPUT',
                   style: TextStyle(
