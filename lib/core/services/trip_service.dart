@@ -185,6 +185,7 @@ class TripService {
     _currentTrip.schedule = DateTime.now();
     _currentTrip.totalDistance = _direction.distance.toDouble();
     _currentTrip.totalTime = _direction.duration.toDouble();
+    _currentTrip.bounds = _direction.bounds;
     bool sendSuccess = await _api.sendOrder(_currentTrip);
     return sendSuccess;
   }

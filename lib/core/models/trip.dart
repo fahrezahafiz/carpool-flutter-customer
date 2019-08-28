@@ -7,7 +7,6 @@ class Trip {
   String _id;
   String driverId;
   String driverName;
-  String idVehicle;
   List<Map<String, dynamic>> users;
   TripState status;
   String category;
@@ -18,6 +17,7 @@ class Trip {
   double totalDistance;
   bool isPrivate;
   String polyLine;
+  LatLngBounds bounds;
   DateTime createdAt;
   int code;
   int nearbyDrivers;
@@ -31,9 +31,8 @@ class Trip {
 
   Trip.fromJson(Map<String, dynamic> json) {
     this._id = json['_id'];
-    //this.driverId = json['driver']['id'] ?? '';
-    //this.driverName = json['driver']['name'] ?? '';
-    this.idVehicle = json['id_vehicle'];
+    this.driverId = json['driver']['id'];
+    this.driverName = json['driver']['name'];
     this.users = List<Map<String, dynamic>>();
     for (var user in json['users']) {
       this.users.add(user);
@@ -83,6 +82,7 @@ class Trip {
         'total_distance': totalDistance,
         'is_private': isPrivate,
         'polyline': polyLine,
+        'bounds': boundsToJson(bounds),
       };
 
   LocationResult _locationResultFromJson(Map<String, dynamic> location) {
@@ -116,5 +116,19 @@ class Trip {
       default:
         return 'UNKNOWN';
     }
+  }
+
+  Map<String, dynamic> boundsToJson(LatLngBounds bounds) {
+    Map<String, dynamic> json = {
+      'northeast': {
+        'lat': bounds.northeast.latitude,
+        'lng': bounds.northeast.longitude,
+      },
+      'southwest': {
+        'lat': bounds.southwest.latitude,
+        'lng': bounds.southwest.longitude,
+      }
+    };
+    return json;
   }
 }

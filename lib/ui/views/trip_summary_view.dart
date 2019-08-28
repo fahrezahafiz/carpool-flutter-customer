@@ -76,7 +76,7 @@ class TripSummaryView extends StatelessWidget {
                         model.destinations[index];
                     return PlaceTile(
                       name: destination.name,
-                      address: destination.placeId,
+                      address: destination.formattedAddress,
                     );
                   },
                 ),
