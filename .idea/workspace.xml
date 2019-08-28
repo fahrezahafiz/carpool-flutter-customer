@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5ebad86-7266-47be-bc5b-b2ff0060a19d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/build/app.dill.track.dill.incremental.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/app.dill.track.dill.incremental.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/models/trip.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/models/trip.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/services/trip_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/services/trip_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/viewmodels/order_later_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/viewmodels/order_later_model.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ui/views/order_later_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/views/order_later_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/views/trip_summary_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/views/trip_summary_view.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/ui/views/order_later_view.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="100" column="32" lean-forward="true" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+            <state relative-caret-position="155">
+              <caret line="88" column="32" lean-forward="true" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -541,8 +536,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/ui/views/order_later_view.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="100" column="32" lean-forward="true" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+        <state relative-caret-position="155">
+          <caret line="88" column="32" lean-forward="true" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
           </folding>

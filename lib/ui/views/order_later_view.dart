@@ -87,7 +87,7 @@ class OrderLaterView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   CompactButton(
-                    child: Icon(Icons.remove),
+                    child: Icon(Icons.remove, color: Colors.black54),
                     onTap: () => model.subtractDuration(),
                   ),
                   UIHelper.hSpaceSmall(),
@@ -99,7 +99,7 @@ class OrderLaterView extends StatelessWidget {
                   ),
                   UIHelper.hSpaceSmall(),
                   CompactButton(
-                    child: Icon(Icons.add),
+                    child: Icon(Icons.add, color: Colors.black54),
                     onTap: () => model.addDuration(),
                   ),
                 ],
