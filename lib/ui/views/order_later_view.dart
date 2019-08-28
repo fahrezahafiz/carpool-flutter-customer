@@ -39,12 +39,14 @@ class OrderLaterView extends StatelessWidget {
                     )),
                   ),
                   onTap: () => showDatePicker(
-                          context: context,
-                          initialDate:
-                              DateTime.now().add(Duration(minutes: 10)),
-                          firstDate: DateTime.now(),
-                          lastDate: DateTime.now().add(Duration(days: 7)))
-                      .then((date) => model.setDate = date)),
+                              context: context,
+                              initialDate:
+                                  DateTime.now().add(Duration(minutes: 10)),
+                              firstDate: DateTime.now(),
+                              lastDate: DateTime.now().add(Duration(days: 7)))
+                          .then((date) {
+                        if (date != null) model.setDate = date;
+                      })),
               UIHelper.vSpaceSmall(),
               Text('WAKTU JEMPUT',
                   style: TextStyle(
@@ -63,9 +65,11 @@ class OrderLaterView extends StatelessWidget {
                     style: TextStyle(color: Colors.green),
                   )),
                 ),
-                onTap: () => showTimePicker(
-                        context: context, initialTime: TimeOfDay.now())
-                    .then((value) => model.setTime = value),
+                onTap: () =>
+                    showTimePicker(context: context, initialTime: model.time)
+                        .then((time) {
+                  if (time != null) model.setTime = time;
+                }),
               ),
               UIHelper.vSpaceXSmall(),
               Row(
