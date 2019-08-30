@@ -12,12 +12,11 @@ import 'package:carpool/ui/views/base_view.dart';
 import 'package:carpool/core/viewmodels/pick_destination_model.dart';
 import 'package:oktoast/oktoast.dart';
 
-class PickDestinationView extends StatefulWidget {
-  @override
-  _PickDestinationViewState createState() => _PickDestinationViewState();
-}
+class PickDestinationView extends StatelessWidget {
+  final String category;
 
-class _PickDestinationViewState extends State<PickDestinationView> {
+  PickDestinationView(this.category);
+
   @override
   Widget build(BuildContext context) {
     UIHelper.init(context);

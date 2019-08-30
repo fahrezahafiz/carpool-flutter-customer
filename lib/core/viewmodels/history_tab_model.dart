@@ -30,7 +30,7 @@ class HistoryTabModel extends BaseModel {
       case TripState.Finished:
         return 'Finished';
       default:
-        return 'Unknown State';
+        return 'Error';
     }
   }
 }

@@ -106,6 +106,7 @@ class TripService {
       encodedPoly: result['routes'][0]['overview_polyline']['points'],
       bounds: result['routes'][0]['bounds'],
     );
+    _direction.distanceAndDuration(result['routes'][0]['legs']);
     sortDestinations(result['geocoded_waypoints']);
   }
 
@@ -140,7 +141,6 @@ class TripService {
       if (element['distance']['value'] > max) {
         max = element['distance']['value'];
         finalDestinationAddress = result['destination_addresses'][index];
-        _direction.distanceAndDuration(element);
       }
       ++index;
     }

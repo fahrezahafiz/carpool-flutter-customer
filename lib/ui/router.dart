@@ -10,7 +10,8 @@ class Router {
       case 'home':
         return MaterialPageRoute(builder: (_) => HomeView());
       case 'pick_destination':
-        return MaterialPageRoute(builder: (_) => PickDestinationView());
+        var category = settings.arguments as String;
+        return MaterialPageRoute(builder: (_) => PickDestinationView(category));
       case 'pick_origin':
         return MaterialPageRoute(builder: (_) => PickOriginView());
       case 'trip_summary':

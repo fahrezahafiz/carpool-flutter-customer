@@ -26,11 +26,18 @@ class Direction {
     this.bounds = LatLngBounds(southwest: southwest, northeast: northeast);
   }
 
-  void distanceAndDuration(Map<String, dynamic> element) {
-    this.distance = element['distance']['value'];
-    this.distanceText = element['distance']['text'];
+  void distanceAndDuration(List<dynamic> legs) {
+    distance = 0;
+    duration = 0;
+    for (Map<String, dynamic> leg in legs) {
+      distance += leg['distance']['value'];
+      duration += leg['duration']['value'];
+    }
 
-    this.duration = element['duration']['value'];
-    this.durationText = element['duration']['text'];
+    double distanceInKm = distance / 1000;
+    distanceText = distanceInKm.toStringAsFixed(1) + ' km';
+
+    double durationInMins = duration / 60;
+    durationText = durationInMins.round().toString() + ' mins';
   }
 }

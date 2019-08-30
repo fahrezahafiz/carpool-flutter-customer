@@ -91,15 +91,31 @@ class HomeTabView extends StatelessWidget {
                 child: MenuCard(
               'Sedan VIP',
               color: Colors.amber,
-              onTap: () => Navigator.pushNamed(context, 'pick_destination'),
+              onTap: () => Navigator.pushNamed(context, 'pick_destination',
+                  arguments: 'sedan'),
             )),
-            Expanded(child: MenuCard('MPV')),
+            Expanded(
+                child: MenuCard(
+              'MPV',
+              onTap: () => Navigator.pushNamed(context, 'pick_destination',
+                  arguments: 'mpvvip'),
+            )),
           ],
         ),
         Row(
           children: <Widget>[
-            Expanded(child: MenuCard('MPV Pool')),
-            Expanded(child: MenuCard('Minibus')),
+            Expanded(
+                child: MenuCard(
+              'MPV Pool',
+              onTap: () => Navigator.pushNamed(context, 'pick_destination',
+                  arguments: 'mpvstandard'),
+            )),
+            Expanded(
+                child: MenuCard(
+              'Minibus',
+              onTap: () => Navigator.pushNamed(context, 'pick_destination',
+                  arguments: 'minibus'),
+            )),
           ],
         ),
       ],
@@ -122,8 +138,8 @@ class MenuCard extends StatelessWidget {
           elevation: 2,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-          child: Container(
-            padding: EdgeInsets.all(20),
+          child: AspectRatio(
+            aspectRatio: 1,
             child: Center(
                 child: Text(
               title,
