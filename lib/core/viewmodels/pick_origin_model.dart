@@ -50,7 +50,7 @@ class PickOriginModel extends BaseModel {
         width: 4,
         color: Colors.blue));
     mapController
-        .animateCamera(CameraUpdate.newLatLngBounds(direction.bounds, 50));
+        .animateCamera(CameraUpdate.newLatLngBounds(direction.bounds, 100));
     notifyListeners();
   }
 }

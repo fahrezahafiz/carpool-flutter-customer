@@ -266,8 +266,9 @@ class Api {
     http.Response response = await http.post(url,
         headers: {"Content-Type": 'application/json'}, body: encodedTrip);
 
+    print('@Api.sendOrder: response body =>');
+    print(response.body);
     if (response.statusCode == 200) {
-      print(response.body);
       return true;
     } else {
       print('@Api.sendOrder: error with status code ${response.statusCode}');

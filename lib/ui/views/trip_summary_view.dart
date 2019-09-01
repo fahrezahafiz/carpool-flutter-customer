@@ -34,6 +34,7 @@ class TripSummaryView extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               color: Colors.black54)),
                       Switch(
+                        inactiveThumbColor: Colors.green,
                         activeColor: Colors.green,
                         value: model.isPrivate,
                         onChanged: model.category == 'sedan'
