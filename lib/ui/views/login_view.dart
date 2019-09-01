@@ -48,7 +48,7 @@ class _LoginViewState extends State<LoginView> {
                   labelText: 'Email',
                 ),
               ),
-              UIHelper.vSpaceSmall(),
+              UIHelper.vSpaceXSmall(),
               TextFormField(
                 controller: _password,
                 obscureText: true,

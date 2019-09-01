@@ -49,10 +49,12 @@ class AccountTabView extends StatelessWidget {
                 context: context,
                 builder: (context) {
                   return ConfirmDialog(
-                    title: 'Logout',
-                    content: 'Anda yakin mau logout dari aplikasi?',
-                    onConfirm: () => model.logout(),
-                  );
+                      title: 'Logout',
+                      content: 'Anda yakin mau logout dari aplikasi?',
+                      onConfirm: () {
+                        model.logout();
+                        Navigator.pop(context);
+                      });
                 },
               ),
             ),

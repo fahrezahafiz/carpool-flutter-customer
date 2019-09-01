@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:async/async.dart';
+import 'package:carpool/core/models/division.dart';
 import 'package:carpool/core/models/trip.dart';
 import 'package:carpool/core/models/user.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -228,6 +229,26 @@ class Api {
       print(
           '@Api.editProfile: http PUT failed with status code ${response.statusCode}');
       return null;
+    }
+  }
+
+  Future<List<Division>> getDivisions() async {
+    String url = restApiBaseUrl + 'division';
+    List<Division> divisions = List<Division>();
+
+    http.Response response = await http.get(url);
+
+    print('@Api.getDivisions: status code ${response.statusCode}');
+    print('@Api.getDivisions: response body =>');
+    print(response.body);
+
+    if (response.statusCode == 200) {
+      for (var div in jsonDecode(response.body)) {
+        divisions.add(Division.fromJson(div));
+      }
+      return divisions;
+    } else {
+      return [];
     }
   }
 
