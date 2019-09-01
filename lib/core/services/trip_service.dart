@@ -45,7 +45,7 @@ class TripService {
     setOriginMarker(origin);
   }
 
-  void initTrip() => _currentTrip = Trip();
+  void initTrip(String category) => _currentTrip = Trip(category);
 
   Future<void> getUserLocation() async {
     print('@MapService: getting user location...');
@@ -179,9 +179,6 @@ class TripService {
 
   Future<bool> sendOrder() async {
     _currentTrip.users.add({"_id": currentUser.id, "name": currentUser.name});
-    _currentTrip.status = TripState.WaitingForApproval;
-    //TODO: set trip type. still hardcoded
-    _currentTrip.category = 'mpvstandard';
     _currentTrip.schedule = DateTime.now();
     _currentTrip.totalDistance = _direction.distance.toDouble();
     _currentTrip.totalTime = _direction.duration.toDouble();

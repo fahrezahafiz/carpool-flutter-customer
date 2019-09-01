@@ -23,10 +23,11 @@ class Trip {
   int code;
   int nearbyDrivers;
 
-  Trip()
+  Trip(String category)
       : destinations = [],
         users = [],
-        isPrivate = false;
+        this.category = category,
+        isPrivate = category == 'sedan';
 
   String get id => _id;
 

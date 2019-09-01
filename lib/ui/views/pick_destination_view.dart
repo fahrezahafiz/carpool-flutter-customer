@@ -21,7 +21,7 @@ class PickDestinationView extends StatelessWidget {
   Widget build(BuildContext context) {
     UIHelper.init(context);
     return BaseView<PickDestinationModel>(
-      onModelReady: (model) => model.init(),
+      onModelReady: (model) => model.init(category),
       builder: (context, model, child) => Scaffold(
         body: SlidingUpPanel(
           controller: model.panelController,
