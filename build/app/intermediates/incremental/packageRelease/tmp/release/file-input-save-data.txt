@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Aug 27 07:15:43 WIB 2019
+#Wed Aug 28 16:08:52 WIB 2019
 4.path=flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf
 13.baseType=DIRECTORY
 8.set=ASSET
