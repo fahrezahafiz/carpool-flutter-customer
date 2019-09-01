@@ -276,9 +276,10 @@ class Api {
   }
 
   Future<bool> cancelOrder(String tripId) async {
-    String url = restApiBaseUrl + 'user/trip/delete?_id=$tripId';
+    String url = restApiBaseUrl + 'user/trip/delete?id=$tripId';
 
     http.Response response = await http.delete(url);
+    print(response.body);
     print('@Api.cancelOrder: status code ${response.statusCode}');
     if (response.statusCode == 200)
       return true;

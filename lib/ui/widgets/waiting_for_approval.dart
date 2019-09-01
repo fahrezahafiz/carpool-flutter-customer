@@ -49,7 +49,12 @@ class WaitingForApproval extends StatelessWidget {
                     builder: (context) => ConfirmDialog(
                       title: 'Cancel Order',
                       content: 'Anda yakin mau cancel order ini?',
-                      onConfirm: () => model.cancelOrder(context),
+                      onConfirm: () => model.cancelOrder().then((success) {
+                        if (success) {
+                          Navigator.pop(context);
+                          Navigator.pop(context, true);
+                        }
+                      }),
                     ),
                   ),
                 ),

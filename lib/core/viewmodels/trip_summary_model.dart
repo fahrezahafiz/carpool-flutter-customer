@@ -21,6 +21,7 @@ class TripSummaryModel extends BaseModel {
   Set<Marker> get destinationMarkers => _tripService.markers;
   Direction get direction => _tripService.direction;
   PanelController get panelController => _panelController;
+  String get category => _tripService.currentTrip.category;
 
   set setMapController(GoogleMapController controller) {
     _tripService.setMapController = controller;

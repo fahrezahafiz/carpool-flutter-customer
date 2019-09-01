@@ -63,7 +63,12 @@ class TripTile extends StatelessWidget {
     return Material(
       color: Colors.transparent,
       child: InkWell(
-        onTap: () => Navigator.pushNamed(context, 'trip', arguments: trip.id),
+        onTap: () async {
+          await Navigator.pushNamed(context, 'trip', arguments: trip.id)
+              .then((val) {
+            if (val) model.init();
+          });
+        },
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Row(

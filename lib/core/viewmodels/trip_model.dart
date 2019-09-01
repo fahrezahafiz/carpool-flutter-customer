@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:carpool/core/models/direction.dart';
 import 'package:carpool/core/models/trip.dart';
 import 'package:carpool/core/services/all_service.dart';
@@ -14,11 +14,14 @@ import 'package:place_picker/place_picker.dart';
 class TripModel extends BaseModel {
   Api _api = locator<Api>();
   TripService _tripService = locator<TripService>();
+  double rating = 0;
 
+  PanelController _panelController = PanelController();
   Timer _periodic;
   Set<Polyline> _polyLines = Set<Polyline>();
   Set<Marker> _markers = Set<Marker>();
 
+  PanelController get panelController => _panelController;
   Trip get trip => _tripService.currentTrip;
   Set<Polyline> get polyLines => _polyLines;
   Set<Marker> get markers => _markers;
@@ -29,6 +32,11 @@ class TripModel extends BaseModel {
 
   set setMapController(GoogleMapController controller) {
     _tripService.setMapController = controller;
+    notifyListeners();
+  }
+
+  set setRating(double rating) {
+    this.rating = rating;
     notifyListeners();
   }
 
@@ -48,7 +56,10 @@ class TripModel extends BaseModel {
           print('Nearby drivers: ${trip.nearbyDrivers}');
         else if (trip.status == TripState.FindingDriver &&
             trip.nearbyDrivers == 0) print('No nearby drivers.');
-        if (trip.status == TripState.Finished) stop();
+        if (trip.status == TripState.Finished) {
+          _panelController.open();
+          stop();
+        }
         notifyListeners();
         print('${trip.status}');
       } catch (e) {
@@ -95,10 +106,10 @@ class TripModel extends BaseModel {
     notifyListeners();
   }
 
-  Future<void> cancelOrder(context) async {
-    await _api.cancelOrder(trip.id).then((success) {
-      if (success) Navigator.pop(context);
-    });
+  Future<bool> cancelOrder() async {
+    bool cancelSuccess;
+    cancelSuccess = await _api.cancelOrder(trip.id);
+    return cancelSuccess;
   }
 
   void stop() => _periodic.cancel();

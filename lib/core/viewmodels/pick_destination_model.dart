@@ -23,10 +23,12 @@ class PickDestinationModel extends BaseModel {
     notifyListeners();
   }
 
-  Future<void> init() async {
+  Future<void> init(String category) async {
     print('PickDestinatioModel init...');
     setBusy(true);
-    _tripService.initTrip();
+    _tripService.initTrip(category);
+    print(
+        '@PickDestinationModel.init: trip category: ${_tripService.currentTrip.category}');
     if (_tripService.userPosition == null) await _tripService.getUserLocation();
     print('Destinations cleared.');
     _tripService.clearMarkers();

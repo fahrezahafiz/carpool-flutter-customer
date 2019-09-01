@@ -7,6 +7,7 @@ class Trip {
   String _id;
   String driverId;
   String driverName;
+  String licensePlate;
   List<Map<String, dynamic>> users;
   TripState status;
   String category;
@@ -22,10 +23,11 @@ class Trip {
   int code;
   int nearbyDrivers;
 
-  Trip()
+  Trip(String category)
       : destinations = [],
         users = [],
-        isPrivate = false;
+        this.category = category,
+        isPrivate = category == 'sedan';
 
   String get id => _id;
 
@@ -33,6 +35,7 @@ class Trip {
     this._id = json['_id'];
     this.driverId = json['driver']['id'];
     this.driverName = json['driver']['name'];
+    this.licensePlate = json['driver']['license_plate'];
     this.users = List<Map<String, dynamic>>();
     for (var user in json['users']) {
       this.users.add(user);
@@ -47,7 +50,7 @@ class Trip {
       case 'ON_THE_WAY':
         this.status = TripState.OnTheWay;
         break;
-      case 'FINISHED':
+      case 'FINISH':
         this.status = TripState.Finished;
         break;
     }
@@ -112,7 +115,7 @@ class Trip {
       case TripState.OnTheWay:
         return 'ON_THE_WAY';
       case TripState.Finished:
-        return 'FINISHED';
+        return 'FINISH';
       default:
         return 'UNKNOWN';
     }

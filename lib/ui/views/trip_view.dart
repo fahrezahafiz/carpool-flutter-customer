@@ -4,7 +4,9 @@ import 'package:carpool/ui/shared/custom_fab.dart';
 import 'package:carpool/ui/shared/ui_helper.dart';
 import 'package:carpool/ui/views/base_view.dart';
 import 'package:carpool/ui/widgets/finding_driver.dart';
+import 'package:carpool/ui/widgets/finished.dart';
 import 'package:carpool/ui/widgets/on_the_way.dart';
+import 'package:carpool/ui/widgets/trip_error.dart';
 import 'package:carpool/ui/widgets/waiting_for_approval.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -21,7 +23,8 @@ class TripView extends StatelessWidget {
       builder: (context, model, child) => WillPopScope(
         onWillPop: () async {
           model.stop();
-          return true;
+          Navigator.pop(context, true);
+          return false;
         },
         child: Scaffold(
           body: SafeArea(
@@ -51,10 +54,10 @@ class TripView extends StatelessWidget {
                                 ? OnTheWay()
                                 : model.trip.status == TripState.Finished
                                     ? Finished()
-                                    : Error(),
+                                    : TripError(),
                 CustomFAB(
                   child: Icon(Icons.arrow_back),
-                  onTap: () => Navigator.pop(context),
+                  onTap: () => Navigator.pop(context, true),
                 ),
                 CustomFAB(
                   alignment: Alignment.topRight,
@@ -65,40 +68,6 @@ class TripView extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class Finished extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: Text('Finished'));
-  }
-}
-
-class Error extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Icon(
-            Icons.error_outline,
-            color: Colors.red,
-            size: 40,
-          ),
-          UIHelper.vSpaceMedium(),
-          Text(
-            'Error: State Not Found',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              color: Colors.black54,
-            ),
-          ),
-        ],
       ),
     );
   }

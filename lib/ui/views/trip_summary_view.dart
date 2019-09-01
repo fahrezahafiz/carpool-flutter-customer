@@ -34,9 +34,12 @@ class TripSummaryView extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               color: Colors.black54)),
                       Switch(
-                          activeColor: Colors.green,
-                          value: model.isPrivate,
-                          onChanged: ((val) => model.togglePrivate(val))),
+                        activeColor: Colors.green,
+                        value: model.isPrivate,
+                        onChanged: model.category == 'sedan'
+                            ? null
+                            : ((val) => model.togglePrivate(val)),
+                      ),
                     ],
                   ),
                   UIHelper.vSpaceSmall(),
@@ -117,7 +120,10 @@ class TripSummaryView extends StatelessWidget {
                       ),
                       onTap: () {
                         model.sendOrder().then((success) {
-                          showToast('Order berhasil');
+                          if (success)
+                            showToast('Order berhasil');
+                          else
+                            showToast('Order gagal');
                           Navigator.of(context)
                               .popUntil((route) => route.isFirst);
                         });

@@ -26,7 +26,6 @@ class ConfirmDialog extends StatelessWidget {
           child: Text('OK'),
           onPressed: () {
             onConfirm();
-            Navigator.pop(context);
           },
         ),
       ],
