@@ -102,7 +102,7 @@ class HomeTabView extends StatelessWidget {
             )),
             Expanded(
                 child: MenuCard(
-              'MPV',
+              'MPV VIP',
               image: 'images/mpv-vip.png',
               onTap: () => Navigator.pushNamed(context, 'pick_destination',
                   arguments: 'mpvvip'),
@@ -113,7 +113,7 @@ class HomeTabView extends StatelessWidget {
           children: <Widget>[
             Expanded(
                 child: MenuCard(
-              'MPV Pool',
+              'MPV',
               image: 'images/mpv-pool.png',
               onTap: () => Navigator.pushNamed(context, 'pick_destination',
                   arguments: 'mpvstandard'),
@@ -159,7 +159,7 @@ class MenuCard extends StatelessWidget {
                 child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Image.asset(image, height: 40),
+                Image.asset(image, height: 36),
                 UIHelper.vSpaceSmall(),
                 Text(
                   title,

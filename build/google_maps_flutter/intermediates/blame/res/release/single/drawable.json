@@ -1,74 +1,74 @@
 [
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/notification_tile_bg.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/4ee5cfb945fd23fce68589a333681a76/res/drawable/notification_tile_bg.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_icon_light_focused.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/notification_bg_low.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/4ee5cfb945fd23fce68589a333681a76/res/drawable/notification_bg_low.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_text_dark_focused.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/notification_icon_background.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/4ee5cfb945fd23fce68589a333681a76/res/drawable/notification_icon_background.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\a36492456be1cb8e73b8ad09bd9853a3\\res\\drawable\\notification_bg.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_light_normal.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable/common_google_signin_btn_icon_light_normal.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_text_light_normal.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/common_google_signin_btn_text_disabled.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable/common_google_signin_btn_text_disabled.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_icon_disabled.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_light_focused.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable/common_google_signin_btn_icon_light_focused.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_icon_light_normal.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_dark_normal.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\a36492456be1cb8e73b8ad09bd9853a3\\res\\drawable\\notification_tile_bg.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/common_google_signin_btn_text_dark.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable/common_google_signin_btn_text_dark.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\a36492456be1cb8e73b8ad09bd9853a3\\res\\drawable\\notification_bg_low.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_dark_focused.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_text_light_focused.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/common_google_signin_btn_text_light.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable/common_google_signin_btn_text_light.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/notification_bg.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/4ee5cfb945fd23fce68589a333681a76/res/drawable/notification_bg.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\a36492456be1cb8e73b8ad09bd9853a3\\res\\drawable\\notification_icon_background.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_dark.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable/common_google_signin_btn_icon_dark.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_text_disabled.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_light.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable/common_google_signin_btn_icon_light.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_text_dark_normal.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_disabled.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable/common_google_signin_btn_icon_disabled.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/common_google_signin_btn_text_dark_normal.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable/common_google_signin_btn_text_dark_normal.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_icon_dark_focused.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/common_google_signin_btn_text_light_focused.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable/common_google_signin_btn_text_light_focused.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/common_google_signin_btn_text_light_normal.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable/common_google_signin_btn_text_light_normal.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_icon_dark_normal.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable\\common_google_signin_btn_icon_dark_normal.xml"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/google_maps_flutter/intermediates/res/merged/release/drawable/common_google_signin_btn_text_dark_focused.xml",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable/common_google_signin_btn_text_dark_focused.xml"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\google_maps_flutter\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     }
 ]

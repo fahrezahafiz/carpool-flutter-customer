@@ -142,6 +142,7 @@ class Api {
     String password,
     String phone,
     DateTime birth,
+    String company,
   }) async {
     String url = restApiBaseUrl + 'user/register';
     print(url);
@@ -154,6 +155,7 @@ class Api {
         "password": password,
         "phone": phone,
         "birth": birth.toString(),
+        "id_company": company,
       }),
     );
 
@@ -178,6 +180,7 @@ class Api {
     } else {
       print('Status code: ${response.statusCode}');
       print('@Api.login: Login failed');
+      print('@Api.login: response body =>\n${response.body}');
       return null;
     }
   }

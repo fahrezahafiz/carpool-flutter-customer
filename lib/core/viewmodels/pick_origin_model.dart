@@ -17,6 +17,7 @@ class PickOriginModel extends BaseModel {
   LocationResult get origin => _tripService.origin;
   Set<Marker> get markers => _tripService.markers;
   Direction get direction => _tripService.direction;
+  String get category => _tripService.currentTrip.category;
 
   Set<Polyline> get polyLines => _polyLines;
 

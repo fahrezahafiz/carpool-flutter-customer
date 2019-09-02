@@ -6,6 +6,7 @@ class User {
   String phone;
   String imageProfile;
   String role;
+  String idCompany;
   String idManager;
   DateTime birth;
   int totalTime;
@@ -22,6 +23,7 @@ class User {
       this.phone,
       this.imageProfile,
       this.role,
+      this.idCompany,
       this.idManager,
       this.birth,
       this.totalTime = 0,
@@ -38,6 +40,7 @@ class User {
         phone: json["phone"],
         imageProfile: json["image_profile"],
         role: json["role"],
+        idCompany: json['id_company'],
         idManager: json["id_manager"],
         birth: DateTime.parse(json["birth"]),
         totalTime: json["total_time"],
@@ -55,6 +58,7 @@ class User {
         "phone": phone,
         "image_profile": imageProfile,
         "role": role,
+        "id_company": idCompany,
         "id_manager": idManager,
         "birth": birth.toString(),
         "total_time": totalTime,

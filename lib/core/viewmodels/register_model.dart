@@ -1,4 +1,3 @@
-import 'package:carpool/core/models/division.dart';
 import 'package:carpool/core/services/api.dart';
 import 'package:carpool/core/viewmodels/base_model.dart';
 import 'package:carpool/locator.dart';
@@ -12,32 +11,25 @@ class RegisterModel extends BaseModel {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
   TextEditingController phone = TextEditingController();
-  Division _division = Division();
   DateTime _birth;
-  List<Division> _divisions = [];
+  String _company;
 
   String dummyValue = 'test';
   List<String> dummy = ['kips', 'hilmy', 'ican'];
 
   String get birth =>
       _birth == null ? null : _birth.toString().substring(0, 10);
-  Division get division => _division;
-  List<Division> get divisions => _divisions;
+  String get company => _company;
 
   set setBirth(DateTime birthDate) {
     _birth = birthDate;
     notifyListeners();
   }
 
-  set setDivision(Division div) {
-    _division = div;
+  set setCompany(String newCompany) {
+    _company = newCompany;
+    print('current company = $_company');
     notifyListeners();
-  }
-
-  Future<void> init() async {
-    setBusy(true);
-    _divisions = await _api.getDivisions();
-    setBusy(false);
   }
 
   Future<bool> register() async {
@@ -48,6 +40,7 @@ class RegisterModel extends BaseModel {
       password: password.text,
       phone: phone.text,
       birth: _birth,
+      company: _company,
     );
     setBusy(false);
     print('@RegisterModel.register: registerSuccess ? $registerSuccess');

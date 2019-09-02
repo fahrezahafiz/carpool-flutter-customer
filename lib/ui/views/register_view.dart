@@ -1,10 +1,8 @@
-import 'package:carpool/core/models/division.dart';
 import 'package:carpool/core/viewmodels/register_model.dart';
 import 'package:carpool/ui/shared/compact_button.dart';
 import 'package:carpool/ui/shared/ui_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:carpool/ui/views/base_view.dart';
-import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 
 class RegisterView extends StatefulWidget {
   @override
@@ -17,7 +15,6 @@ class _RegisterViewState extends State<RegisterView> {
   @override
   Widget build(BuildContext context) {
     return BaseView<RegisterModel>(
-      onModelReady: (model) => model.init(),
       builder: (context, model, child) => Scaffold(
         body: Form(
           key: _formKey,
@@ -129,24 +126,19 @@ class _RegisterViewState extends State<RegisterView> {
                       ),
                       UIHelper.vSpaceXSmall(),
                       DropdownButtonFormField(
-                        items: model.dummy.map((String names) {
-                          return new DropdownMenuItem(
-                              value: names,
-                              child: Row(
-                                children: <Widget>[
-                                  Icon(Icons.star),
-                                  Text(names),
-                                ],
-                              ));
+                        items: ['PERTAMINA', 'SCU'].map((String company) {
+                          return DropdownMenuItem(
+                            value: company,
+                            child: Text(company),
+                          );
                         }).toList(),
-                        onChanged: (newValue) {
-                          model.dummyValue = newValue;
-                        },
-                        value: model.dummyValue,
+                        onChanged: (selected) => model.setCompany = selected,
+                        value: model.company,
                         decoration: InputDecoration(
-                          contentPadding: EdgeInsets.fromLTRB(10, 20, 10, 20),
-                          filled: true,
-                          fillColor: Colors.grey[200],
+                          contentPadding: EdgeInsets.all(18),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(18)),
+                          labelText: 'Perusahaan',
                         ),
                       ),
                       UIHelper.vSpaceMedium(),

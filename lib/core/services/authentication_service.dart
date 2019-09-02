@@ -14,6 +14,7 @@ class AuthenticationService {
     String password,
     String phone,
     DateTime birth,
+    String company,
   }) async {
     bool registerSuccess = await _api.register(
       name: name,
@@ -21,6 +22,7 @@ class AuthenticationService {
       password: password,
       phone: phone,
       birth: birth,
+      company: company,
     );
     return registerSuccess;
   }

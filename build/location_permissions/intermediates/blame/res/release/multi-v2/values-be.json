@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/location_permissions/intermediates/incremental/mergeReleaseResources/merged.dir/values-be/values-be.xml",
+            "outputFile": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\location_permissions\\intermediates\\res\\merged\\release\\values-be\\values-be.xml",
             "map": [
                 {
-                    "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.1.aar/624de4f0cbc0886d0ebec2f7e2c1a6c8/res/values-be/values-be.xml",
+                    "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.1.aar\\009cce6835e875d55353fa5a1ea566ee\\res\\values-be\\values-be.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -16,10 +16,10 @@
             ]
         },
         {
-            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/location_permissions/intermediates/res/merged/release/values-be/values-be.xml",
+            "outputFile": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\location_permissions\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-be\\values-be.xml",
             "map": [
                 {
-                    "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.1.aar/624de4f0cbc0886d0ebec2f7e2c1a6c8/res/values-be/values-be.xml",
+                    "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.1.aar\\009cce6835e875d55353fa5a1ea566ee\\res\\values-be\\values-be.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
