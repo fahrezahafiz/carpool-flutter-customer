@@ -21,6 +21,7 @@ class AccountTabView extends StatelessWidget {
             style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
           ),
         ),
+        UIHelper.vSpaceXSmall(),
         Center(
             child: Text(
           user.email,
@@ -30,6 +31,8 @@ class AccountTabView extends StatelessWidget {
         Center(
             child: Text(
           user.phone,
+          style: TextStyle(
+              fontSize: 16, color: Colors.black45, fontWeight: FontWeight.bold),
         )),
         UIHelper.vSpaceSmall(),
         CircleAvatar(
@@ -43,8 +46,8 @@ class AccountTabView extends StatelessWidget {
             Column(
               children: <Widget>[
                 Text(
-                  '${user.totalDistance} km',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  model.getTotalDistance,
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
                 Text('Total Distance', style: TextStyle(color: Colors.black54))
               ],
@@ -52,8 +55,8 @@ class AccountTabView extends StatelessWidget {
             Column(
               children: <Widget>[
                 Text(
-                  '${user.totalTime} mins',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  model.getTotalTime,
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
                 Text('Total Time', style: TextStyle(color: Colors.black54))
               ],
@@ -62,14 +65,19 @@ class AccountTabView extends StatelessWidget {
         ),
         UIHelper.vSpaceMedium(),
         CompactButton(
-          child: Center(
-            child: Text(
-              'Logout',
-              style: TextStyle(
-                  color: Colors.redAccent,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold),
-            ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Icon(Icons.exit_to_app, color: Colors.red),
+              UIHelper.hspaceXSmall(),
+              Text(
+                'Logout',
+                style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold),
+              ),
+            ],
           ),
           padding: EdgeInsets.all(8),
           onTap: () => showDialog(

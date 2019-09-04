@@ -173,14 +173,14 @@ class Api {
     print(url);
     http.Response response = await http.get(url);
 
+    print('@Api.login: status code ${response.statusCode}');
+    print('@Api.login: user object =>');
+    print(response.body);
     if (response.statusCode == 200) {
       user = User.fromJson(jsonDecode(response.body));
-      print('@Api.login: userId = ${user.id}');
       return user;
     } else {
-      print('Status code: ${response.statusCode}');
       print('@Api.login: Login failed');
-      print('@Api.login: response body =>\n${response.body}');
       return null;
     }
   }
