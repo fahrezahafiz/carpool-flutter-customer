@@ -328,7 +328,11 @@ class Api {
       "message": message,
     };
 
-    http.Response response = await http.post(url, body: feedback);
+    http.Response response = await http.post(
+      url,
+      headers: {"Content-Type": 'application/json'},
+      body: jsonEncode(feedback),
+    );
 
     print('@Api.sendFeedback: status code ${response.statusCode}');
     print(response.body);

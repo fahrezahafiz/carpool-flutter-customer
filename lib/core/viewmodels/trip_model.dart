@@ -122,12 +122,17 @@ class TripModel extends BaseModel {
   void stop() => _periodic.cancel();
 
   Future<bool> sendFeedback() async {
+    setBusy(true);
     bool sendSuccess = await _api.sendFeedback(
         idTrip: trip.id,
         idUser: currentUser.id,
         idDriver: trip.driverId,
         rating: rating,
         message: feedbackMessage);
+    setBusy(false);
+    if (sendSuccess)
+      _tripService.setCurrentTrip = await _api.getTripById(trip.id);
+    notifyListeners();
     return sendSuccess;
   }
 }

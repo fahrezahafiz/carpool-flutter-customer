@@ -72,6 +72,7 @@ class Trip {
     this.createdAt = DateTime.parse(json['created_at']);
     this.code = json['code'];
     this.nearbyDrivers = json['nearby_drivers'];
+    this.feedback = Feedback.fromJson(json['feedback']);
   }
 
   Map<String, dynamic> toJson() => {

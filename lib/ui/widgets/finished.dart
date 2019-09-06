@@ -2,6 +2,7 @@ import 'package:carpool/core/viewmodels/trip_model.dart';
 import 'package:carpool/ui/shared/compact_button.dart';
 import 'package:carpool/ui/shared/star_rating.dart';
 import 'package:carpool/ui/shared/ui_helper.dart';
+import 'package:oktoast/oktoast.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -66,8 +67,10 @@ class Finished extends StatelessWidget {
             size: 34,
             color: Colors.orangeAccent,
             starPadding: 4,
-            rating: trip.feedback ?? model.rating,
-            onRatingChanged: (rating) => model.setRating = rating,
+            rating: trip.feedback == null ? model.rating : trip.feedback.rating,
+            onRatingChanged: trip.feedback == null
+                ? (rating) => model.setRating = rating
+                : null,
           ),
           UIHelper.vSpaceSmall(),
           TextField(
@@ -80,25 +83,31 @@ class Finished extends StatelessWidget {
             maxLength: 100,
             maxLines: 3,
             onChanged: (val) => model.feedbackMessage = val,
+            textInputAction: TextInputAction.done,
           ),
           Center(
-            child: RaisedButton(
-              color: Colors.green,
-              elevation: 0,
-              highlightElevation: 1,
-              child: Text(
-                'Submit',
-                style:
-                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-              ),
-              onPressed: model.rating == 0
-                  ? null
-                  : () async {
-                      bool sendSuccess = await model.sendFeedback();
-                      if (sendSuccess) {
-                      } else {}
-                    },
-            ),
+            child: model.isBusy
+                ? CircularProgressIndicator()
+                : RaisedButton(
+                    color: Colors.green,
+                    elevation: 0,
+                    highlightElevation: 1,
+                    child: Text(
+                      'Submit',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                    onPressed: model.rating == 0
+                        ? null
+                        : () async {
+                            bool sendSuccess = await model.sendFeedback();
+                            if (sendSuccess) {
+                              showToast('Feedback berhasil dikirim');
+                            } else {
+                              showToast('Gagal mengirim feedback');
+                            }
+                          },
+                  ),
           ),
           UIHelper.vSpaceSmall(),
           Divider(height: 0),
