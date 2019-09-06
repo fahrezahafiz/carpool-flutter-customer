@@ -1,10 +1,12 @@
 import 'dart:async';
+import 'package:carpool/core/models/user.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:carpool/core/models/direction.dart';
 import 'package:carpool/core/models/trip.dart';
 import 'package:carpool/core/services/all_service.dart';
 import 'package:carpool/core/services/api.dart';
 import 'package:carpool/core/services/trip_service.dart';
+import 'package:carpool/core/services/authentication_service.dart';
 import 'package:carpool/core/viewmodels/base_model.dart';
 import 'package:carpool/locator.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +16,11 @@ import 'package:place_picker/place_picker.dart';
 class TripModel extends BaseModel {
   Api _api = locator<Api>();
   TripService _tripService = locator<TripService>();
+  AuthenticationService _authenticationService =
+      locator<AuthenticationService>();
+
   double rating = 0;
+  String feedbackMessage;
 
   PanelController _panelController = PanelController();
   Timer _periodic;
@@ -29,6 +35,7 @@ class TripModel extends BaseModel {
   CameraPosition get defaultPosition => _tripService.defaultPosition;
   GoogleMapController get mapController => _tripService.mapController;
   Direction get direction => _tripService.direction;
+  User get currentUser => _authenticationService.currentUser;
 
   set setMapController(GoogleMapController controller) {
     _tripService.setMapController = controller;
@@ -57,13 +64,13 @@ class TripModel extends BaseModel {
         else if (trip.status == TripState.FindingDriver &&
             trip.nearbyDrivers == 0) print('No nearby drivers.');
         if (trip.status == TripState.Finished) {
-          _panelController.open();
           stop();
         }
         notifyListeners();
         print('${trip.status}');
-      } catch (e) {
+      } catch (e, stack) {
         print('periodic stopped because of:\n$e');
+        print(stack);
         stop();
       }
     });
@@ -113,4 +120,14 @@ class TripModel extends BaseModel {
   }
 
   void stop() => _periodic.cancel();
+
+  Future<bool> sendFeedback() async {
+    bool sendSuccess = await _api.sendFeedback(
+        idTrip: trip.id,
+        idUser: currentUser.id,
+        idDriver: trip.driverId,
+        rating: rating,
+        message: feedbackMessage);
+    return sendSuccess;
+  }
 }

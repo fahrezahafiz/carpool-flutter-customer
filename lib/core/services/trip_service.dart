@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:carpool/core/models/direction.dart';
+import 'package:carpool/core/models/feedback.dart';
 import 'package:carpool/core/models/trip.dart';
 import 'package:carpool/core/models/user.dart';
 import 'package:carpool/core/services/api.dart';

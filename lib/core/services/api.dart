@@ -4,6 +4,7 @@ import 'dart:io';
 
 import 'package:async/async.dart';
 import 'package:carpool/core/models/division.dart';
+import 'package:carpool/core/models/feedback.dart';
 import 'package:carpool/core/models/trip.dart';
 import 'package:carpool/core/models/user.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -306,6 +307,31 @@ class Api {
     http.Response response = await http.delete(url);
     print(response.body);
     print('@Api.cancelOrder: status code ${response.statusCode}');
+    if (response.statusCode == 200)
+      return true;
+    else
+      return false;
+  }
+
+  Future<bool> sendFeedback(
+      {String idTrip,
+      String idUser,
+      String idDriver,
+      double rating,
+      String message}) async {
+    String url = restApiBaseUrl + 'feedback/create';
+    Map<String, dynamic> feedback = {
+      "id_trip": idTrip,
+      "id_user": idUser,
+      "id_driver": idDriver,
+      "rating": rating,
+      "message": message,
+    };
+
+    http.Response response = await http.post(url, body: feedback);
+
+    print('@Api.sendFeedback: status code ${response.statusCode}');
+    print(response.body);
     if (response.statusCode == 200)
       return true;
     else

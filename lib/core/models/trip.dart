@@ -1,5 +1,6 @@
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:place_picker/place_picker.dart';
+import 'package:carpool/core/models/feedback.dart';
 
 enum TripState { WaitingForApproval, FindingDriver, OnTheWay, Finished }
 
@@ -22,6 +23,7 @@ class Trip {
   DateTime createdAt;
   int code;
   int nearbyDrivers;
+  Feedback feedback;
 
   Trip(String category)
       : destinations = [],

@@ -28,7 +28,7 @@ class Finished extends StatelessWidget {
             children: <Widget>[
               Text(
                 'Trip finished',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -66,10 +66,41 @@ class Finished extends StatelessWidget {
             size: 34,
             color: Colors.orangeAccent,
             starPadding: 4,
-            rating: model.rating,
+            rating: trip.feedback ?? model.rating,
             onRatingChanged: (rating) => model.setRating = rating,
           ),
-          UIHelper.vSpaceMedium(),
+          UIHelper.vSpaceSmall(),
+          TextField(
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.all(12),
+              hintText: 'What do you think of the driver?',
+              border:
+                  OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+            ),
+            maxLength: 100,
+            maxLines: 3,
+            onChanged: (val) => model.feedbackMessage = val,
+          ),
+          Center(
+            child: RaisedButton(
+              color: Colors.green,
+              elevation: 0,
+              highlightElevation: 1,
+              child: Text(
+                'Submit',
+                style:
+                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+              ),
+              onPressed: model.rating == 0
+                  ? null
+                  : () async {
+                      bool sendSuccess = await model.sendFeedback();
+                      if (sendSuccess) {
+                      } else {}
+                    },
+            ),
+          ),
+          UIHelper.vSpaceSmall(),
           Divider(height: 0),
           UIHelper.vSpaceSmall(),
           Row(
@@ -128,17 +159,3 @@ class Finished extends StatelessWidget {
     );
   }
 }
-
-//Center(
-//child: RaisedButton(
-//padding: EdgeInsets.all(10),
-//elevation: 0,
-//highlightElevation: 1,
-//color: Colors.green,
-//child: Text(
-//'Submit',
-//style: TextStyle(fontSize: 16, color: Colors.white),
-//),
-//onPressed: () {},
-//),
-//),
