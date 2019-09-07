@@ -35,9 +35,11 @@ class Trip {
 
   Trip.fromJson(Map<String, dynamic> json) {
     this._id = json['_id'];
-    this.driverId = json['driver']['id'];
-    this.driverName = json['driver']['name'];
-    this.licensePlate = json['driver']['license_plate'];
+    if (json['driver'] != null) {
+      this.driverId = json['driver']['id'];
+      this.driverName = json['driver']['name'];
+      this.licensePlate = json['driver']['license_plate'];
+    }
     this.users = List<Map<String, dynamic>>();
     for (var user in json['users']) {
       this.users.add(user);
@@ -72,7 +74,7 @@ class Trip {
     this.createdAt = DateTime.parse(json['created_at']);
     this.code = json['code'];
     this.nearbyDrivers = json['nearby_drivers'];
-    this.feedback = Feedback.fromJson(json['feedback']);
+    //this.feedback = Feedback.fromJson(json['feedback']);
   }
 
   Map<String, dynamic> toJson() => {
