@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       radius: 100,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Carpool',
         theme: ThemeData(
           appBarTheme: AppBarTheme(
             color: Colors.white,

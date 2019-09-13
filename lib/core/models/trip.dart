@@ -64,8 +64,7 @@ class Trip {
     for (var dest in json['destination']) {
       this.destinations.add(_locationResultFromJson(dest));
     }
-    this.schedule =
-        DateTime.fromMillisecondsSinceEpoch(json['schedule'] * 1000);
+    this.schedule = DateTime.parse(json['schedule']);
     int totalTimeInt = json['total_time'];
     this.totalTime = totalTimeInt.toDouble();
     int totalDistanceInt = json['total_distance'];

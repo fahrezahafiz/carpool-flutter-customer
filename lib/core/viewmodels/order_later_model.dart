@@ -1,7 +1,10 @@
 import 'package:carpool/core/viewmodels/base_model.dart';
 import 'package:flutter/material.dart';
+import 'package:carpool/locator.dart';
+import 'package:carpool/core/services/trip_service.dart';
 
 class OrderLaterModel extends BaseModel {
+  TripService _tripService = locator<TripService>();
   DateTime _date = DateTime.now();
   TimeOfDay _time = TimeOfDay.now();
   bool _isDinas = false;
