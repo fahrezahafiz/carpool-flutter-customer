@@ -40,6 +40,15 @@ class AuthenticationService {
     }
   }
 
+  Future<bool> getUserInfo() async {
+    String id = _currentUser.id;
+    User user = await _api.getUserInfo(id);
+    if (user != null) _currentUser = user;
+
+    bool success = user != null;
+    return success;
+  }
+
   Future<bool> logout(String id) async {
     bool logoutSuccess = await _api.logout(id);
     return logoutSuccess;

@@ -44,6 +44,12 @@ class RootModel extends BaseModel {
     notifyListeners();
   }
 
+  Future<void> getUserInfo() async {
+    print('@RootModel.getUserInfo: getting user info');
+    await _authService.getUserInfo();
+    notifyListeners();
+  }
+
   Future<void> login(String email, String password) async {
     SharedPreferences _pref = await SharedPreferences.getInstance();
     setBusy(true);

@@ -176,12 +176,29 @@ class Api {
 
     print('@Api.login: status code ${response.statusCode}');
     print('@Api.login: user object =>');
-    print(response.body);
+    //print(response.body);
     if (response.statusCode == 200) {
       user = User.fromJson(jsonDecode(response.body));
       return user;
     } else {
       print('@Api.login: Login failed');
+      return null;
+    }
+  }
+
+  Future<User> getUserInfo(String id) async {
+    String url = restApiBaseUrl + 'user/$id';
+    print(url);
+    http.Response response = await http.get(url);
+
+    print('@Api.getUserInfo: status code ${response.statusCode}');
+    print('@Api.getUserInfo: user object =>');
+    print(response.body);
+    if (response.statusCode == 200) {
+      User user = User.fromJson(jsonDecode(response.body));
+      return user;
+    } else {
+      print('@Api.getUserInfo: request failed');
       return null;
     }
   }
