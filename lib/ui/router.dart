@@ -1,4 +1,6 @@
+import 'package:carpool/core/models/trip.dart';
 import 'package:carpool/ui/views/all_view.dart';
+import 'package:carpool/ui/views/trip_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:place_picker/place_picker.dart';
 
@@ -21,6 +23,9 @@ class Router {
       case 'trip':
         var tripId = settings.arguments as String;
         return MaterialPageRoute(builder: (_) => TripView(tripId));
+      case 'trip_details':
+        var trip = settings.arguments as Trip;
+        return MaterialPageRoute(builder: (_) => TripDetailsView(trip));
       case 'placepicker':
         return MaterialPageRoute(
             builder: (_) =>

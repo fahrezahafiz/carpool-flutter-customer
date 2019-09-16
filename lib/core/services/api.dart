@@ -284,7 +284,7 @@ class Api {
       return null;
   }
 
-  Future<bool> sendOrder(Trip trip) async {
+  Future<String> sendOrder(Trip trip) async {
     String url = restApiBaseUrl + 'trip/create';
     String encodedTrip = jsonEncode(trip.toJson());
     print(encodedTrip);
@@ -294,10 +294,11 @@ class Api {
     print('@Api.sendOrder: response body =>');
     print(response.body);
     if (response.statusCode == 200) {
-      return true;
+      Map<String, dynamic> json = jsonDecode(response.body);
+      return json['_id'];
     } else {
       print('@Api.sendOrder: error with status code ${response.statusCode}');
-      return false;
+      return null;
     }
   }
 

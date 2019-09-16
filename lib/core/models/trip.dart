@@ -1,17 +1,16 @@
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:place_picker/place_picker.dart';
 import 'package:carpool/core/models/feedback.dart';
+import 'package:carpool/core/models/driver.dart';
 
 enum TripState { WaitingForApproval, FindingDriver, OnTheWay, Finished }
 
 class Trip {
   String _id;
-  String driverId;
-  String driverName;
-  String licensePlate;
+  Driver driver;
   List<Map<String, dynamic>> users;
   TripState status;
-  String category;
+  String _category;
   LocationResult origin;
   List<LocationResult> destinations;
   DateTime schedule;
@@ -28,17 +27,18 @@ class Trip {
   Trip(String category)
       : destinations = [],
         users = [],
-        this.category = category,
+        this._category = category,
         isPrivate = category == 'sedan';
 
   String get id => _id;
+  String get category => _getCategory();
+  String get distanceText => _getDistanceText();
+  String get timeText => _getTimeText();
 
   Trip.fromJson(Map<String, dynamic> json) {
     this._id = json['_id'];
     if (json['driver'] != null) {
-      this.driverId = json['driver']['id'];
-      this.driverName = json['driver']['name'];
-      this.licensePlate = json['driver']['license_plate'];
+      this.driver = Driver.fromTrip(json['driver']);
     }
     this.users = List<Map<String, dynamic>>();
     for (var user in json['users']) {
@@ -58,7 +58,7 @@ class Trip {
         this.status = TripState.Finished;
         break;
     }
-    this.category = json['category'];
+    this._category = json['category'];
     this.origin = _locationResultFromJson(json['origin']);
     this.destinations = List<LocationResult>();
     for (var dest in json['destination']) {
@@ -79,7 +79,7 @@ class Trip {
   Map<String, dynamic> toJson() => {
         'users': users,
         //'status_trip': tripStateToString(status),
-        'category': category,
+        'category': _category,
         'origin': _locationResultToJson(origin),
         'destination': destinations.map((dest) {
           return _locationResultToJson(dest);
@@ -137,5 +137,31 @@ class Trip {
       }
     };
     return json;
+  }
+
+  String _getDistanceText() {
+    double distanceInKm = totalDistance / 1000;
+    return distanceInKm.toStringAsFixed(1) + ' km';
+  }
+
+  String _getTimeText() {
+    double durationInMins = totalTime / 60;
+    return durationInMins.round().toString() + ' mins';
+  }
+
+  String _getCategory() {
+    print('@Trip: _category = $_category');
+    switch (_category) {
+      case 'sedan':
+        return 'Sedan';
+      case 'mpvstandard':
+        return 'MPV';
+      case 'mpvvip':
+        return 'MPV VIP';
+      case 'minibus':
+        return 'Minibus';
+      default:
+        return 'Unkown category';
+    }
   }
 }

@@ -49,13 +49,13 @@ class TripService {
   void initTrip(String category) => _currentTrip = Trip(category);
 
   Future<void> getUserLocation() async {
-    print('@MapService: getting user location...');
+    print('@TripService: getting user location...');
     Position position = await Geolocator()
         .getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
     _userPosition = new CameraPosition(
         target: LatLng(position.latitude, position.longitude), zoom: 16);
     print(
-        '@MapService: userPosition = (${_userPosition.target.latitude}, ${_userPosition.target.longitude})');
+        '@TripService: userPosition = (${_userPosition.target.latitude}, ${_userPosition.target.longitude})');
   }
 
   void moveToUserLocation() {
@@ -93,8 +93,6 @@ class TripService {
 
   Future<void> getDirection() async {
     LatLng finalDestination = await getFinalDestinationLatLng();
-    print(
-        '@MapService.getDirection: Distance: ${_direction.distance}Duration: ${_direction.duration}');
     List<LatLng> wayPoints = [];
     for (LocationResult dest in destinations) {
       if (dest.latLng != finalDestination) wayPoints.add(dest.latLng);
@@ -109,6 +107,8 @@ class TripService {
     );
     _direction.distanceAndDuration(result['routes'][0]['legs']);
     sortDestinations(result['geocoded_waypoints']);
+    print(
+        '@TripService.getDirection: Distance: ${_direction.distance}Duration: ${_direction.duration}');
   }
 
   void sortDestinations(List<dynamic> wayPoints) {
@@ -149,7 +149,7 @@ class TripService {
     finalDestination = destinations
         .firstWhere((dest) => dest.formattedAddress == finalDestinationAddress);
     print(
-        '@MapService.getFinalDestinationLatLng: finalDestination => ${finalDestination.name}\n${finalDestination.formattedAddress}. LatLng: ${finalDestination.latLng}');
+        '@TripService.getFinalDestinationLatLng: finalDestination => ${finalDestination.name}\n${finalDestination.formattedAddress}. LatLng: ${finalDestination.latLng}');
     return finalDestination.latLng;
   }
 
@@ -178,13 +178,13 @@ class TripService {
     _currentTrip.isPrivate = val;
   }
 
-  Future<bool> sendOrder() async {
+  Future<String> sendOrder() async {
     _currentTrip.users.add({"_id": currentUser.id, "name": currentUser.name});
     _currentTrip.schedule = DateTime.now();
     _currentTrip.totalDistance = _direction.distance.toDouble();
     _currentTrip.totalTime = _direction.duration.toDouble();
     _currentTrip.bounds = _direction.bounds;
-    bool sendSuccess = await _api.sendOrder(_currentTrip);
-    return sendSuccess;
+    String tripId = await _api.sendOrder(_currentTrip);
+    return tripId;
   }
 }

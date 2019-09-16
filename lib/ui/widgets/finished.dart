@@ -124,14 +124,14 @@ class Finished extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      trip.driverName,
+                      trip.driver.name,
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: Colors.black87),
                     ),
                     Text(
-                      trip.licensePlate,
+                      trip.driver.licensePlate,
                       style: TextStyle(color: Colors.black54),
                     ),
                   ],

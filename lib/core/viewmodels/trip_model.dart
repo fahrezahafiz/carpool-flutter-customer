@@ -126,7 +126,7 @@ class TripModel extends BaseModel {
     bool sendSuccess = await _api.sendFeedback(
         idTrip: trip.id,
         idUser: currentUser.id,
-        idDriver: trip.driverId,
+        idDriver: trip.driver.id,
         rating: rating,
         message: feedbackMessage);
     setBusy(false);

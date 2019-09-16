@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       position: ToastPosition(align: Alignment.bottomCenter),
       textPadding: EdgeInsets.all(14),
       textStyle: TextStyle(fontFamily: 'Nunito', color: Colors.black54),
-      backgroundColor: Colors.white60,
+      backgroundColor: Colors.white70,
       radius: 100,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

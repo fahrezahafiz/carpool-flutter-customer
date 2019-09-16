@@ -1,4 +1,5 @@
 import 'package:carpool/core/models/direction.dart';
+import 'package:carpool/core/models/trip.dart';
 import 'package:carpool/core/viewmodels/base_model.dart';
 import 'package:carpool/core/services/trip_service.dart';
 import 'package:carpool/locator.dart';
@@ -59,10 +60,10 @@ class TripSummaryModel extends BaseModel {
     notifyListeners();
   }
 
-  Future<bool> sendOrder() async {
+  Future<String> sendOrder() async {
     setBusy(true);
-    bool sendSuccess = await _tripService.sendOrder();
+    String tripId = await _tripService.sendOrder();
     setBusy(false);
-    return sendSuccess;
+    return tripId;
   }
 }
