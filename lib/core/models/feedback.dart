@@ -9,7 +9,7 @@ class Feedback {
     this.idTrip = json['id_trip'];
     this.idUser = json['id_user'];
     this.idDriver = json['id_driver'];
-    this.rating = json['rating'];
+    this.rating = double.parse(json['rating'].toString());
     this.message = json['message'];
   }
 

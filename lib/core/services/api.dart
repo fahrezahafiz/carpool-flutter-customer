@@ -142,7 +142,6 @@ class Api {
     String email,
     String password,
     String phone,
-    DateTime birth,
     String company,
   }) async {
     String url = restApiBaseUrl + 'user/register';
@@ -155,7 +154,6 @@ class Api {
         "email": email,
         "password": password,
         "phone": phone,
-        "birth": birth.toString(),
         "id_company": company,
       }),
     );
@@ -187,7 +185,7 @@ class Api {
   }
 
   Future<User> getUserInfo(String id) async {
-    String url = restApiBaseUrl + 'user/$id';
+    String url = restApiBaseUrl + 'user?_id=$id';
     print(url);
     http.Response response = await http.get(url);
 
@@ -211,44 +209,32 @@ class Api {
     return false;
   }
 
-  Future<User> editProfile(User user, {File image}) async {
+  Future<User> editProfile(
+      String id, String name, String email, String phone) async {
     String url = restApiBaseUrl + 'user/edit';
-    String editImageUrl = restApiBaseUrl + 'user/profile/${user.id}';
+    print(url);
     User changedUser;
+    Map<String, dynamic> changed = {
+      "_id": id,
+      "name": name,
+      "email": email,
+      "phone": phone
+    };
+    print('@Api.editProfile: ${changed['_id']}');
+    print('@Api.editProfile: ${changed['name']}');
 
-    //set profile image
-    if (image != null) {
-      var stream =
-          new http.ByteStream(DelegatingStream.typed(image.openRead()));
-      // get file length
-      var length = await image.length();
-      //create uri
-      var uri = Uri.parse(editImageUrl);
-      // create multipart request
-      var request = new http.MultipartRequest("PUT", uri);
-      // multipart that takes file
-      var multipartFile = new http.MultipartFile(
-          'image_profile', stream, length,
-          filename: basename(image.path));
-      // add file to multipart
-      request.files.add(multipartFile);
-      // send
-      var response = await request.send();
-      print(response.statusCode);
-      // listen for response
-      response.stream.transform(utf8.decoder).listen((value) {
-        print(value);
-      });
-    }
+    http.Response response = await http.put(url,
+        headers: {"Content-Type": 'application/json'},
+        body: jsonEncode(changed));
 
-    http.Response response = await http.put(url, body: user.toJson());
+    print('@Api.editProfile: status code ${response.statusCode}');
+    print('@Api.editProfile: response body =>');
+    print(response.body);
 
     if (response.statusCode == 200) {
       changedUser = User.fromJson(jsonDecode(response.body));
       return changedUser;
     } else {
-      print(
-          '@Api.editProfile: http PUT failed with status code ${response.statusCode}');
       return null;
     }
   }
@@ -345,6 +331,7 @@ class Api {
       "rating": rating,
       "message": message,
     };
+    print('@Api.sendFeedback: feedback object =>\n$feedback');
 
     http.Response response = await http.post(
       url,

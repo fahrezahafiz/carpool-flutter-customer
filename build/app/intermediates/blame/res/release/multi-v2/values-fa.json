@@ -4,24 +4,7 @@
             "outputFile": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\app\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-fa\\values-fa.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-basement-16.0.1.aar\\e8228c8b478a665eded52a51f81526e2\\res\\values-fa\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "213",
-                        "endOffsets": "460"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1249",
-                        "endColumns": "213",
-                        "endOffsets": "1458"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\values-fa\\values.xml",
+                    "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-17.0.0.aar\\f710bc6afa2e338befb03118bdfcab42\\res\\values-fa\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,6 +35,23 @@
                         "startOffsets": "2835",
                         "endColumns": "100",
                         "endOffsets": "2931"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-basement-17.0.0.aar\\bd9550e5e2261c42809bb4bdcb77ab84\\res\\values-fa\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "213",
+                        "endOffsets": "460"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1249",
+                        "endColumns": "213",
+                        "endOffsets": "1458"
                     }
                 }
             ]

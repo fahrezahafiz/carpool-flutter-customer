@@ -12,9 +12,10 @@ class TripDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(),
+        leading: IconButton(
+            icon: Icon(Icons.close), onPressed: () => Navigator.pop(context)),
         centerTitle: true,
-        title: Text('Detail Pesanan'),
+        title: Text('Detail Trip'),
       ),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
@@ -35,7 +36,7 @@ class TripDetailsView extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text('CATEGORY',
+              Text('KATEGORI',
                   style: TextStyle(
                       fontWeight: FontWeight.bold, color: Colors.black54)),
               RaisedButton(

@@ -47,9 +47,15 @@ class OnTheWay extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            '${trip.driver.licensePlate} | ${trip.driver.vehicleName}',
+                            trip.driver.licensePlate,
                             style: TextStyle(
                                 fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black87),
+                          ),
+                          Text(
+                            trip.driver.vehicleName,
+                            style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black87),
                           ),

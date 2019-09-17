@@ -23,6 +23,8 @@ class HistoryTabModel extends BaseModel {
     switch (state) {
       case TripState.WaitingForApproval:
         return 'Waiting for Approval';
+      case TripState.Denied:
+        return 'Denied';
       case TripState.FindingDriver:
         return 'Finding Driver';
       case TripState.OnTheWay:

@@ -8,7 +8,6 @@ class User {
   String role;
   String idCompany;
   String idManager;
-  DateTime birth;
   int totalTime;
   int totalDistance;
   String idDivision;
@@ -25,7 +24,6 @@ class User {
       this.role,
       this.idCompany,
       this.idManager,
-      this.birth,
       this.totalTime = 0,
       this.totalDistance = 0,
       this.idDivision,
@@ -42,7 +40,6 @@ class User {
         role: json["role"],
         idCompany: json['id_company'],
         idManager: json["id_manager"],
-        birth: DateTime.parse(json["birth"]),
         totalTime: json["total_time"],
         totalDistance: json["total_distance"],
         idDivision: json["id_division"],
@@ -56,11 +53,10 @@ class User {
         "email": email,
         "password": password,
         "phone": phone,
-        "image_profile": imageProfile,
+        if (imageProfile != null) "image_profile": imageProfile,
         "role": role,
         "id_company": idCompany,
         "id_manager": idManager,
-        "birth": birth.toString(),
         "total_time": totalTime,
         "total_distance": totalDistance,
         "id_division": idDivision,

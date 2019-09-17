@@ -20,7 +20,7 @@ class TripModel extends BaseModel {
       locator<AuthenticationService>();
 
   double rating = 0;
-  String feedbackMessage;
+  TextEditingController feedbackMessage = TextEditingController();
 
   PanelController _panelController = PanelController();
   Timer _periodic;
@@ -47,9 +47,15 @@ class TripModel extends BaseModel {
     notifyListeners();
   }
 
+  set setFeedbackSent(bool val) {
+    _tripService.setFeedbackSent = val;
+    notifyListeners();
+  }
+
   Future<void> init(String tripId) async {
     setBusy(true);
     _tripService.setCurrentTrip = await _api.getTripById(tripId);
+    if (trip.feedbackSent) feedbackMessage.text = trip.feedback.message;
     print('${trip.status}');
     setMarkers();
     await getDirection();
@@ -128,10 +134,12 @@ class TripModel extends BaseModel {
         idUser: currentUser.id,
         idDriver: trip.driver.id,
         rating: rating,
-        message: feedbackMessage);
+        message: feedbackMessage.text);
     setBusy(false);
-    if (sendSuccess)
+    if (sendSuccess) {
       _tripService.setCurrentTrip = await _api.getTripById(trip.id);
+      _tripService.setFeedbackSent = true;
+    }
     notifyListeners();
     return sendSuccess;
   }

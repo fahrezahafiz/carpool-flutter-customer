@@ -98,33 +98,6 @@ class _RegisterViewState extends State<RegisterView> {
                         ),
                       ),
                       UIHelper.vSpaceXSmall(),
-                      GestureDetector(
-                        onTap: () {
-                          showDatePicker(
-                            context: context,
-                            initialDate: DateTime.now(),
-                            firstDate: DateTime(1940),
-                            lastDate: DateTime.now(),
-                          ).then((date) {
-                            if (date != null) model.setBirth = date;
-                          });
-                        },
-                        child: Container(
-                          padding: EdgeInsets.all(18),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(18),
-                            border: Border.all(
-                                color: Theme.of(context).primaryColor),
-                          ),
-                          child: Text(
-                              model.birth == null
-                                  ? 'Tanggal Lahir'
-                                  : model.birth,
-                              style: TextStyle(
-                                  color: Colors.black54, fontSize: 16)),
-                        ),
-                      ),
-                      UIHelper.vSpaceXSmall(),
                       DropdownButtonFormField(
                         items: ['PERTAMINA', 'SCU'].map((String company) {
                           return DropdownMenuItem(

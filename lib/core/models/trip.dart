@@ -1,9 +1,11 @@
+import 'dart:convert';
+
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:place_picker/place_picker.dart';
 import 'package:carpool/core/models/feedback.dart';
 import 'package:carpool/core/models/driver.dart';
 
-enum TripState { WaitingForApproval, FindingDriver, OnTheWay, Finished }
+enum TripState { WaitingForApproval, Denied, FindingDriver, OnTheWay, Finished }
 
 class Trip {
   String _id;
@@ -23,6 +25,7 @@ class Trip {
   int code;
   int nearbyDrivers;
   Feedback feedback;
+  bool feedbackSent;
 
   Trip(String category)
       : destinations = [],
@@ -47,6 +50,9 @@ class Trip {
     switch (json['status']) {
       case 'WAITING_FOR_APPROVAL':
         this.status = TripState.WaitingForApproval;
+        break;
+      case 'DENIED':
+        this.status = TripState.Denied;
         break;
       case 'FINDING_DRIVER':
         this.status = TripState.FindingDriver;
@@ -73,7 +79,11 @@ class Trip {
     this.createdAt = DateTime.parse(json['created_at']);
     this.code = json['code'];
     this.nearbyDrivers = json['nearby_drivers'];
-    //this.feedback = Feedback.fromJson(json['feedback']);
+    this.feedback = Feedback.fromJson(json['feedback']);
+    print('@Trip.fromJson: feedback on trip =>\n');
+    print(jsonEncode(feedback));
+    this.feedbackSent = this.feedback.message.isNotEmpty;
+    print('@Trip.fromJson: feedbackSent ? $feedbackSent');
   }
 
   Map<String, dynamic> toJson() => {
@@ -114,6 +124,8 @@ class Trip {
     switch (state) {
       case TripState.WaitingForApproval:
         return 'WAITING_FOR_APPROVAL';
+      case TripState.Denied:
+        return 'DENIED';
       case TripState.FindingDriver:
         return 'FINDING_DRIVER';
       case TripState.OnTheWay:

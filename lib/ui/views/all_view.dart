@@ -9,3 +9,4 @@ export 'register_view.dart';
 export 'trip_summary_view.dart';
 export 'trip_view.dart';
 export 'trip_details_view.dart';
+export 'edit_profile_view.dart';

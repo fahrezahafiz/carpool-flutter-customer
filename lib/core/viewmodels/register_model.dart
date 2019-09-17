@@ -39,7 +39,6 @@ class RegisterModel extends BaseModel {
       email: email.text,
       password: password.text,
       phone: phone.text,
-      birth: _birth,
       company: _company,
     );
     setBusy(false);

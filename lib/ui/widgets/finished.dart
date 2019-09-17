@@ -46,68 +46,19 @@ class Finished extends StatelessWidget {
               ),
             ],
           ),
-          UIHelper.vSpaceXSmall(),
-          Text(
-            'Order ' + trip.id,
-            style: TextStyle(color: Colors.black54),
-          ),
-          UIHelper.vSpaceMedium(),
-          Divider(height: 0),
           UIHelper.vSpaceSmall(),
           Center(
+            child: CompactButton(
+              padding: EdgeInsets.all(4),
               child: Text(
-            'Driver feedback',
-            style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                color: Colors.black54),
-          )),
-          UIHelper.vSpaceSmall(),
-          StarRating(
-            size: 34,
-            color: Colors.orangeAccent,
-            starPadding: 4,
-            rating: trip.feedback == null ? model.rating : trip.feedback.rating,
-            onRatingChanged: trip.feedback == null
-                ? (rating) => model.setRating = rating
-                : null,
-          ),
-          UIHelper.vSpaceSmall(),
-          TextField(
-            decoration: InputDecoration(
-              contentPadding: EdgeInsets.all(12),
-              hintText: 'What do you think of the driver?',
-              border:
-                  OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                'TRIP DETAILS',
+                style:
+                    TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, 'trip_details', arguments: trip);
+              },
             ),
-            maxLength: 100,
-            maxLines: 3,
-            onChanged: (val) => model.feedbackMessage = val,
-            textInputAction: TextInputAction.done,
-          ),
-          Center(
-            child: model.isBusy
-                ? CircularProgressIndicator()
-                : RaisedButton(
-                    color: Colors.green,
-                    elevation: 0,
-                    highlightElevation: 1,
-                    child: Text(
-                      'Submit',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, color: Colors.white),
-                    ),
-                    onPressed: model.rating == 0
-                        ? null
-                        : () async {
-                            bool sendSuccess = await model.sendFeedback();
-                            if (sendSuccess) {
-                              showToast('Feedback berhasil dikirim');
-                            } else {
-                              showToast('Gagal mengirim feedback');
-                            }
-                          },
-                  ),
           ),
           UIHelper.vSpaceSmall(),
           Divider(height: 0),
@@ -142,27 +93,70 @@ class Finished extends StatelessWidget {
           UIHelper.vSpaceSmall(),
           Divider(height: 0),
           UIHelper.vSpaceSmall(),
-          Text('TRIP DETAILS',
-              style: TextStyle(
-                  fontWeight: FontWeight.bold, color: Colors.black45)),
-          PlaceTile(
-            name: trip.origin.name,
-            address: trip.origin.formattedAddress,
-            leadingIconColor: Colors.blueAccent,
+          Center(
+              child: Text(
+            'Driver feedback',
+            style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.black54),
+          )),
+          UIHelper.vSpaceSmall(),
+          StarRating(
+            size: 34,
+            color: Colors.orangeAccent,
+            starPadding: 4,
+            rating: trip.feedbackSent ? trip.feedback.rating : model.rating,
+            onRatingChanged:
+                trip.feedbackSent ? null : (rating) => model.setRating = rating,
           ),
-          Expanded(
-            child: ListView(
-              children: trip.destinations
-                  .map(
-                    (dest) => PlaceTile(
-                      name: dest.name,
-                      address: dest.formattedAddress,
-                      leadingIconColor: Colors.red,
-                    ),
-                  )
-                  .toList(),
+          UIHelper.vSpaceSmall(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4),
+            child: TextField(
+              controller: model.feedbackMessage,
+              enabled: !trip.feedbackSent,
+              decoration: InputDecoration(
+                contentPadding: EdgeInsets.all(12),
+                hintText: 'What do you think of the driver?',
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+              ),
+              maxLength: 100,
+              maxLines: 3,
+              onChanged: (val) => model.feedbackMessage.text = val,
+              textInputAction: TextInputAction.done,
             ),
           ),
+          // ignore: sdk_version_ui_as_code
+          if (!trip.feedbackSent)
+            Center(
+              child: model.isBusy
+                  ? CircularProgressIndicator()
+                  : RaisedButton(
+                      color: Colors.green,
+                      elevation: 0,
+                      highlightElevation: 1,
+                      child: Text(
+                        'Submit',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.white),
+                      ),
+                      onPressed: model.rating == 0
+                          ? null
+                          : () async {
+                              bool sendSuccess = await model.sendFeedback();
+                              if (sendSuccess) {
+                                showToast('Feedback berhasil dikirim');
+                              } else {
+                                showToast('Gagal mengirim feedback');
+                              }
+                            },
+                    ),
+            ),
+          UIHelper.vSpaceSmall(),
+          Divider(height: 0),
+          UIHelper.vSpaceSmall(),
         ],
       ),
     );

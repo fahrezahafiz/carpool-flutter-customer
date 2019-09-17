@@ -12,13 +12,11 @@ MERGED from [:google_maps_flutter] C:\Users\parej\Documents\GitHub\carpool-flutt
 MERGED from [:geolocator] C:\Users\parej\Documents\GitHub\carpool-flutter-customer\build\geolocator\intermediates\library_manifest\release\AndroidManifest.xml:2:1-9:12
 MERGED from [:google_api_availability] C:\Users\parej\Documents\GitHub\carpool-flutter-customer\build\google_api_availability\intermediates\library_manifest\release\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-location-16.0.0.aar\54cef25d4496f353647718e4d72107e2\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\ada065895867e11ad61d1791ef9560b4\AndroidManifest.xml:17:1-38:12
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\1bc44ec51dc739e345b621e8adae27a7\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-maps-17.0.0.aar\5017bb764a103a2cbe3138b3e41e5ef9\AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-base-17.0.0.aar\f710bc6afa2e338befb03118bdfcab42\AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\9a586d1abd8f8048c48823898b412a41\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-16.0.1.aar\464b620f7fa7311de202c5e39ef31a63\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\e8228c8b478a665eded52a51f81526e2\AndroidManifest.xml:17:1-28:12
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\5e1b9e3dbf9befd3f46f2c1fe371f990\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.media:media:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\6c39f4d6fa159e1978251a50a20082ed\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-tasks-17.0.0.aar\859f8e10165bbfdcb2b17e6bbc24919f\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\bd9550e5e2261c42809bb4bdcb77ab84\AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\d237297e2814ff5ac04d7ebb076d5cc9\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\56b996145f2d19162e7ff3bf92fcecf4\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\da49b234b49e34f63f0739a9eabc68df\AndroidManifest.xml:17:1-22:12
@@ -36,12 +34,12 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\parej\.gradle\
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\7a1240ebbb7843d9af6b6d09e76f7bc6\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\9731142bb1e186a6498647897d09469f\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\e037f1466ca7e3bdd3d2224474bf5ecf\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\89453a8202a93be5f4d52cfd8ee8103c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\5f2c0a4297fad08145b174c9f5396a50\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\d2ecc2f6db1245fe4a9789185c5ef8c6\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\f2037de1f2e14e09c8802f7a4eadf1d4\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\1386d099d6fc4df54061057309039e03\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\518c1c19594bb14a5b61db5bab3c2cfa\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\5f2c0a4297fad08145b174c9f5396a50\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\d2ecc2f6db1245fe4a9789185c5ef8c6\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\89453a8202a93be5f4d52cfd8ee8103c\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\multidex-2.0.0.aar\3af0cf2b7aef2641b6cf86773679cd0b\AndroidManifest.xml:17:1-22:12
 INJECTED from C:\Users\parej\Documents\GitHub\carpool-flutter-customer\android\app\src\main\AndroidManifest.xml:1:1-39:12
 INJECTED from C:\Users\parej\Documents\GitHub\carpool-flutter-customer\android\app\src\main\AndroidManifest.xml:1:1-39:12
@@ -64,16 +62,16 @@ application
 ADDED from C:\Users\parej\Documents\GitHub\carpool-flutter-customer\android\app\src\main\AndroidManifest.xml:9:5-36:19
 MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-location-16.0.0.aar\54cef25d4496f353647718e4d72107e2\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-location-16.0.0.aar\54cef25d4496f353647718e4d72107e2\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\ada065895867e11ad61d1791ef9560b4\AndroidManifest.xml:30:5-36:19
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\ada065895867e11ad61d1791ef9560b4\AndroidManifest.xml:30:5-36:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\1bc44ec51dc739e345b621e8adae27a7\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\1bc44ec51dc739e345b621e8adae27a7\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-maps-17.0.0.aar\5017bb764a103a2cbe3138b3e41e5ef9\AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-maps-17.0.0.aar\5017bb764a103a2cbe3138b3e41e5ef9\AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-base-17.0.0.aar\f710bc6afa2e338befb03118bdfcab42\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-base-17.0.0.aar\f710bc6afa2e338befb03118bdfcab42\AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\9a586d1abd8f8048c48823898b412a41\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\9a586d1abd8f8048c48823898b412a41\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-16.0.1.aar\464b620f7fa7311de202c5e39ef31a63\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-16.0.1.aar\464b620f7fa7311de202c5e39ef31a63\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\e8228c8b478a665eded52a51f81526e2\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\e8228c8b478a665eded52a51f81526e2\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-tasks-17.0.0.aar\859f8e10165bbfdcb2b17e6bbc24919f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-tasks-17.0.0.aar\859f8e10165bbfdcb2b17e6bbc24919f\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\bd9550e5e2261c42809bb4bdcb77ab84\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\bd9550e5e2261c42809bb4bdcb77ab84\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.0.2] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\core-1.0.2.aar\04b01ded9a34e1b9918400bf3c1683e0\AndroidManifest.xml:22:5-89
 MERGED from [androidx.core:core:1.0.2] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\core-1.0.2.aar\04b01ded9a34e1b9918400bf3c1683e0\AndroidManifest.xml:22:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\60772b828a2746570a06a43a483f1a35\AndroidManifest.xml:22:5-23:19
@@ -124,8 +122,8 @@ ADDED from C:\Users\parej\Documents\GitHub\carpool-flutter-customer\android\app\
 		ADDED from C:\Users\parej\Documents\GitHub\carpool-flutter-customer\android\app\src\main\AndroidManifest.xml:32:27-74
 uses-library#org.apache.http.legacy
 ADDED from C:\Users\parej\Documents\GitHub\carpool-flutter-customer\android\app\src\main\AndroidManifest.xml:35:9-87
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\ada065895867e11ad61d1791ef9560b4\AndroidManifest.xml:33:9-35:40
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\ada065895867e11ad61d1791ef9560b4\AndroidManifest.xml:33:9-35:40
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-maps-17.0.0.aar\5017bb764a103a2cbe3138b3e41e5ef9\AndroidManifest.xml:33:9-35:40
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-maps-17.0.0.aar\5017bb764a103a2cbe3138b3e41e5ef9\AndroidManifest.xml:33:9-35:40
 	android:required
 		ADDED from C:\Users\parej\Documents\GitHub\carpool-flutter-customer\android\app\src\main\AndroidManifest.xml:35:61-85
 	android:name
@@ -164,20 +162,16 @@ MERGED from [:google_api_availability] C:\Users\parej\Documents\GitHub\carpool-f
 MERGED from [:google_api_availability] C:\Users\parej\Documents\GitHub\carpool-flutter-customer\build\google_api_availability\intermediates\library_manifest\release\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-location-16.0.0.aar\54cef25d4496f353647718e4d72107e2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-location-16.0.0.aar\54cef25d4496f353647718e4d72107e2\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\ada065895867e11ad61d1791ef9560b4\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\ada065895867e11ad61d1791ef9560b4\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\1bc44ec51dc739e345b621e8adae27a7\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\1bc44ec51dc739e345b621e8adae27a7\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-maps-17.0.0.aar\5017bb764a103a2cbe3138b3e41e5ef9\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-maps-17.0.0.aar\5017bb764a103a2cbe3138b3e41e5ef9\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-base-17.0.0.aar\f710bc6afa2e338befb03118bdfcab42\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-base-17.0.0.aar\f710bc6afa2e338befb03118bdfcab42\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\9a586d1abd8f8048c48823898b412a41\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-places-placereport-16.0.0.aar\9a586d1abd8f8048c48823898b412a41\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-16.0.1.aar\464b620f7fa7311de202c5e39ef31a63\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-tasks-16.0.1.aar\464b620f7fa7311de202c5e39ef31a63\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\e8228c8b478a665eded52a51f81526e2\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\e8228c8b478a665eded52a51f81526e2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\5e1b9e3dbf9befd3f46f2c1fe371f990\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\5e1b9e3dbf9befd3f46f2c1fe371f990\AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\6c39f4d6fa159e1978251a50a20082ed\AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\6c39f4d6fa159e1978251a50a20082ed\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-tasks-17.0.0.aar\859f8e10165bbfdcb2b17e6bbc24919f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-tasks-17.0.0.aar\859f8e10165bbfdcb2b17e6bbc24919f\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\bd9550e5e2261c42809bb4bdcb77ab84\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\bd9550e5e2261c42809bb4bdcb77ab84\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\d237297e2814ff5ac04d7ebb076d5cc9\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\d237297e2814ff5ac04d7ebb076d5cc9\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\56b996145f2d19162e7ff3bf92fcecf4\AndroidManifest.xml:20:5-44
@@ -212,18 +206,18 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\parej\.g
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\9731142bb1e186a6498647897d09469f\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\e037f1466ca7e3bdd3d2224474bf5ecf\AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\e037f1466ca7e3bdd3d2224474bf5ecf\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\89453a8202a93be5f4d52cfd8ee8103c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\89453a8202a93be5f4d52cfd8ee8103c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\5f2c0a4297fad08145b174c9f5396a50\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\5f2c0a4297fad08145b174c9f5396a50\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\d2ecc2f6db1245fe4a9789185c5ef8c6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\d2ecc2f6db1245fe4a9789185c5ef8c6\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\f2037de1f2e14e09c8802f7a4eadf1d4\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\f2037de1f2e14e09c8802f7a4eadf1d4\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\1386d099d6fc4df54061057309039e03\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\1386d099d6fc4df54061057309039e03\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\518c1c19594bb14a5b61db5bab3c2cfa\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\518c1c19594bb14a5b61db5bab3c2cfa\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\5f2c0a4297fad08145b174c9f5396a50\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\5f2c0a4297fad08145b174c9f5396a50\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\d2ecc2f6db1245fe4a9789185c5ef8c6\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\d2ecc2f6db1245fe4a9789185c5ef8c6\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\89453a8202a93be5f4d52cfd8ee8103c\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\89453a8202a93be5f4d52cfd8ee8103c\AndroidManifest.xml:20:5-44
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\multidex-2.0.0.aar\3af0cf2b7aef2641b6cf86773679cd0b\AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\multidex-2.0.0.aar\3af0cf2b7aef2641b6cf86773679cd0b\AndroidManifest.xml:20:5-43
 INJECTED from C:\Users\parej\Documents\GitHub\carpool-flutter-customer\android\app\src\main\AndroidManifest.xml
@@ -237,30 +231,30 @@ INJECTED from C:\Users\parej\Documents\GitHub\carpool-flutter-customer\android\a
 		ADDED from C:\Users\parej\Documents\GitHub\carpool-flutter-customer\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\parej\Documents\GitHub\carpool-flutter-customer\android\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\ada065895867e11ad61d1791ef9560b4\AndroidManifest.xml:23:5-79
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-maps-17.0.0.aar\5017bb764a103a2cbe3138b3e41e5ef9\AndroidManifest.xml:23:5-79
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\ada065895867e11ad61d1791ef9560b4\AndroidManifest.xml:23:22-76
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-maps-17.0.0.aar\5017bb764a103a2cbe3138b3e41e5ef9\AndroidManifest.xml:23:22-76
 uses-permission#android.permission.INTERNET
-ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\ada065895867e11ad61d1791ef9560b4\AndroidManifest.xml:24:5-67
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-maps-17.0.0.aar\5017bb764a103a2cbe3138b3e41e5ef9\AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\ada065895867e11ad61d1791ef9560b4\AndroidManifest.xml:24:22-64
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-maps-17.0.0.aar\5017bb764a103a2cbe3138b3e41e5ef9\AndroidManifest.xml:24:22-64
 uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\ada065895867e11ad61d1791ef9560b4\AndroidManifest.xml:26:5-28:35
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-maps-17.0.0.aar\5017bb764a103a2cbe3138b3e41e5ef9\AndroidManifest.xml:26:5-28:35
 	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\ada065895867e11ad61d1791ef9560b4\AndroidManifest.xml:27:9-41
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-maps-17.0.0.aar\5017bb764a103a2cbe3138b3e41e5ef9\AndroidManifest.xml:27:9-41
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-maps-16.1.0.aar\ada065895867e11ad61d1791ef9560b4\AndroidManifest.xml:28:9-32
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-maps-17.0.0.aar\5017bb764a103a2cbe3138b3e41e5ef9\AndroidManifest.xml:28:9-32
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\1bc44ec51dc739e345b621e8adae27a7\AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-base-17.0.0.aar\f710bc6afa2e338befb03118bdfcab42\AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\1bc44ec51dc739e345b621e8adae27a7\AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-base-17.0.0.aar\f710bc6afa2e338befb03118bdfcab42\AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\1bc44ec51dc739e345b621e8adae27a7\AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-base-17.0.0.aar\f710bc6afa2e338befb03118bdfcab42\AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-base-16.0.1.aar\1bc44ec51dc739e345b621e8adae27a7\AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\play-services-base-17.0.0.aar\f710bc6afa2e338befb03118bdfcab42\AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\e8228c8b478a665eded52a51f81526e2\AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\bd9550e5e2261c42809bb4bdcb77ab84\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\e8228c8b478a665eded52a51f81526e2\AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\bd9550e5e2261c42809bb4bdcb77ab84\AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\e8228c8b478a665eded52a51f81526e2\AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\parej\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-17.0.0.aar\bd9550e5e2261c42809bb4bdcb77ab84\AndroidManifest.xml:24:13-58

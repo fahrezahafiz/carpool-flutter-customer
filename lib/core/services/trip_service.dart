@@ -46,6 +46,10 @@ class TripService {
     setOriginMarker(origin);
   }
 
+  set setFeedbackSent(bool val) {
+    _currentTrip.feedbackSent = val;
+  }
+
   void initTrip(String category) => _currentTrip = Trip(category);
 
   Future<void> getUserLocation() async {

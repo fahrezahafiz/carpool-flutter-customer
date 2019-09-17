@@ -9,8 +9,11 @@ class AccountTabModel extends BaseModel {
 
   User get currentUser => _authenticationService.currentUser;
 
-  void init() {
+  void init() async {
+    setBusy(true);
     print('init account tab model');
+    await _authenticationService.getUserInfo();
+    setBusy(false);
   }
 
   Future<void> logout() async {}

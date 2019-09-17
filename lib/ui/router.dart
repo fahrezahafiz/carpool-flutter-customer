@@ -26,6 +26,8 @@ class Router {
       case 'trip_details':
         var trip = settings.arguments as Trip;
         return MaterialPageRoute(builder: (_) => TripDetailsView(trip));
+      case 'edit_profile':
+        return MaterialPageRoute(builder: (_) => EditProfileView());
       case 'placepicker':
         return MaterialPageRoute(
             builder: (_) =>

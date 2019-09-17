@@ -7,3 +7,4 @@ export 'register_model.dart';
 export 'root_model.dart';
 export 'trip_model.dart';
 export 'trip_summary_model.dart';
+export 'edit_profile_model.dart';

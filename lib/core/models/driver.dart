@@ -6,7 +6,7 @@ class Driver {
   String vehicleName;
 
   Driver.fromTrip(Map<String, dynamic> driver) {
-    this.id = driver['id'];
+    this.id = driver['_id'];
     this.name = driver['name'];
     this.phone = driver['phone'];
     this.licensePlate = driver['license_plate'];
