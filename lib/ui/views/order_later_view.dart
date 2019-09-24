@@ -124,10 +124,12 @@ class OrderLaterView extends StatelessWidget {
           child: Container(
             height: 24,
             child: Center(
-              child: Text(
-                'Order Nanti',
-                style: TextStyle(color: Colors.white, fontSize: 16),
-              ),
+              child: model.isBusy
+                  ? CircularProgressIndicator()
+                  : Text(
+                      'Order Nanti',
+                      style: TextStyle(color: Colors.white, fontSize: 16),
+                    ),
             ),
           ),
           onTap: () {},

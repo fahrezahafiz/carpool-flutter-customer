@@ -7,7 +7,7 @@ import 'package:carpool/ui/widgets/denied.dart';
 import 'package:carpool/ui/widgets/finding_driver.dart';
 import 'package:carpool/ui/widgets/finished.dart';
 import 'package:carpool/ui/widgets/on_the_way.dart';
-import 'package:carpool/ui/widgets/trip_error.dart';
+import 'package:carpool/ui/widgets/loading.dart';
 import 'package:carpool/ui/widgets/waiting_for_approval.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -57,7 +57,7 @@ class TripView extends StatelessWidget {
                                     ? OnTheWay()
                                     : model.trip.status == TripState.Finished
                                         ? Finished()
-                                        : TripError(),
+                                        : Loading(),
                 CustomFAB(
                   child: Icon(Icons.arrow_back),
                   onTap: () => Navigator.pop(context, true),

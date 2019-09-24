@@ -119,7 +119,7 @@ class TripSummaryView extends StatelessWidget {
                         ),
                       ),
                       onTap: () {
-                        model.sendOrder().then((tripId) {
+                        model.orderNow().then((tripId) {
                           if (tripId != null) {
                             showToast('Order berhasil',
                                 position: ToastPosition.top);

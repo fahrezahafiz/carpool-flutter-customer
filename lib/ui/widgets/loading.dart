@@ -1,9 +1,11 @@
 import 'package:carpool/core/viewmodels/trip_model.dart';
+import 'package:carpool/ui/shared/compact_button.dart';
+import 'package:carpool/ui/shared/confirm_dialog.dart';
 import 'package:carpool/ui/shared/ui_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class TripError extends StatelessWidget {
+class Loading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final model = Provider.of<TripModel>(context);
@@ -30,8 +32,33 @@ class TripError extends StatelessWidget {
                 Icon(Icons.error_outline, color: Colors.red, size: 36),
                 UIHelper.vSpaceXSmall(),
                 Text(
-                  'Error: Trip state not found',
+                  'Loading...',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+                UIHelper.vSpaceSmall(),
+                CompactButton(
+                  padding: EdgeInsets.all(4),
+                  child: Text(
+                    'Cancel order',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  onTap: () => showDialog(
+                    context: context,
+                    builder: (context) => ConfirmDialog(
+                      title: 'Cancel Order',
+                      content: 'Anda yakin mau cancel order ini?',
+                      onConfirm: () => model.cancelOrder().then((success) {
+                        if (success) {
+                          Navigator.pop(context);
+                          Navigator.pop(context, true);
+                        }
+                      }),
+                    ),
+                  ),
                 ),
               ],
             ),

@@ -40,4 +40,16 @@ class OrderLaterModel extends BaseModel {
     if (duration > 1) duration--;
     notifyListeners();
   }
+
+  Future<String> orderLater() async {
+    setBusy(true);
+    DateTime schedule = DateTime(
+        _date.year, _date.month, _date.day, _time.hour, _time.minute, 0, 0, 0);
+    _tripService.currentTrip.schedule = schedule;
+    String tripId = await _tripService.sendOrder();
+    setBusy(false);
+    print(
+        '@OrderLaterModel.orderLater: book later with schedule: ${_tripService.currentTrip.schedule}');
+    return tripId;
+  }
 }

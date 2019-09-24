@@ -60,8 +60,9 @@ class TripSummaryModel extends BaseModel {
     notifyListeners();
   }
 
-  Future<String> sendOrder() async {
+  Future<String> orderNow() async {
     setBusy(true);
+    _tripService.currentTrip.schedule = DateTime.now();
     String tripId = await _tripService.sendOrder();
     setBusy(false);
     return tripId;

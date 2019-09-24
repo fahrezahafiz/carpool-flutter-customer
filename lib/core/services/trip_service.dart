@@ -184,7 +184,6 @@ class TripService {
 
   Future<String> sendOrder() async {
     _currentTrip.users.add({"_id": currentUser.id, "name": currentUser.name});
-    _currentTrip.schedule = DateTime.now();
     _currentTrip.totalDistance = _direction.distance.toDouble();
     _currentTrip.totalTime = _direction.duration.toDouble();
     _currentTrip.bounds = _direction.bounds;
