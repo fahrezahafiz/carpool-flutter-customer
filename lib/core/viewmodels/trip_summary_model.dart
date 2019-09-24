@@ -63,6 +63,7 @@ class TripSummaryModel extends BaseModel {
   Future<String> orderNow() async {
     setBusy(true);
     _tripService.currentTrip.schedule = DateTime.now();
+    _tripService.currentTrip.status = TripState.WaitingForApproval;
     String tripId = await _tripService.sendOrder();
     setBusy(false);
     return tripId;

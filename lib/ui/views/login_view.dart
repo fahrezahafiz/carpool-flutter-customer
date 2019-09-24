@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carpool/ui/shared/ui_helper.dart';
 import 'package:carpool/ui/shared/compact_button.dart';
+import 'package:flutter/services.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:provider/provider.dart';
 import 'package:carpool/core/viewmodels/root_model.dart';
@@ -84,6 +85,7 @@ class _LoginViewState extends State<LoginView> {
                         ),
                       ),
                       onPressed: () {
+                        SystemChannels.textInput.invokeMethod('TextInput.hide');
                         final form = _formKey.currentState;
                         form.save();
                         if (form.validate()) {

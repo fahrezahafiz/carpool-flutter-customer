@@ -5,7 +5,15 @@ import 'package:place_picker/place_picker.dart';
 import 'package:carpool/core/models/feedback.dart';
 import 'package:carpool/core/models/driver.dart';
 
-enum TripState { WaitingForApproval, Denied, FindingDriver, OnTheWay, Finished }
+enum TripState {
+  WaitingForApproval,
+  WaitingForApprovalBooked,
+  DeniedByUser,
+  DeniedByAdmin,
+  FindingDriver,
+  OnTheWay,
+  Finished
+}
 
 class Trip {
   String _id;
@@ -51,8 +59,14 @@ class Trip {
       case 'WAITING_FOR_APPROVAL':
         this.status = TripState.WaitingForApproval;
         break;
-      case 'DENIED':
-        this.status = TripState.Denied;
+      case 'WAITING_FOR_APPROVAL_BOOKED':
+        this.status = TripState.WaitingForApprovalBooked;
+        break;
+      case 'DENIED_BY_USER':
+        this.status = TripState.DeniedByUser;
+        break;
+      case 'DENIED_BY_ADMIN':
+        this.status = TripState.DeniedByAdmin;
         break;
       case 'FINDING_DRIVER':
         this.status = TripState.FindingDriver;
@@ -88,7 +102,7 @@ class Trip {
 
   Map<String, dynamic> toJson() => {
         'users': users,
-        //'status_trip': tripStateToString(status),
+        'status': tripStateToString(status),
         'category': _category,
         'origin': _locationResultToJson(origin),
         'destination': destinations.map((dest) {
@@ -124,8 +138,12 @@ class Trip {
     switch (state) {
       case TripState.WaitingForApproval:
         return 'WAITING_FOR_APPROVAL';
-      case TripState.Denied:
-        return 'DENIED';
+      case TripState.WaitingForApprovalBooked:
+        return 'WAITING_FOR_APPROVAL_BOOKED';
+      case TripState.DeniedByUser:
+        return 'DENIED_BY_USER';
+      case TripState.DeniedByAdmin:
+        return 'DENIED_BY_ADMIN';
       case TripState.FindingDriver:
         return 'FINDING_DRIVER';
       case TripState.OnTheWay:

@@ -23,8 +23,10 @@ class HistoryTabModel extends BaseModel {
     switch (state) {
       case TripState.WaitingForApproval:
         return 'Waiting for Approval';
-      case TripState.Denied:
-        return 'Denied';
+      case TripState.DeniedByUser:
+        return 'Denied by You';
+      case TripState.DeniedByAdmin:
+        return 'Denied by Admin';
       case TripState.FindingDriver:
         return 'Finding Driver';
       case TripState.OnTheWay:
@@ -32,7 +34,7 @@ class HistoryTabModel extends BaseModel {
       case TripState.Finished:
         return 'Finished';
       default:
-        return 'Error';
+        return 'Loading';
     }
   }
 }

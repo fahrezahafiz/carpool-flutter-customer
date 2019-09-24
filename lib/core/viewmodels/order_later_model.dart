@@ -1,3 +1,4 @@
+import 'package:carpool/core/models/trip.dart';
 import 'package:carpool/core/viewmodels/base_model.dart';
 import 'package:flutter/material.dart';
 import 'package:carpool/locator.dart';
@@ -46,6 +47,7 @@ class OrderLaterModel extends BaseModel {
     DateTime schedule = DateTime(
         _date.year, _date.month, _date.day, _time.hour, _time.minute, 0, 0, 0);
     _tripService.currentTrip.schedule = schedule;
+    _tripService.currentTrip.status = TripState.WaitingForApprovalBooked;
     String tripId = await _tripService.sendOrder();
     setBusy(false);
     print(

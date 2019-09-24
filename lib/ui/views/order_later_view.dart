@@ -4,6 +4,7 @@ import 'package:carpool/ui/shared/ui_helper.dart';
 import 'package:carpool/ui/views/base_view.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:oktoast/oktoast.dart';
 
 class OrderLaterView extends StatelessWidget {
   @override
@@ -132,7 +133,18 @@ class OrderLaterView extends StatelessWidget {
                     ),
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            model.orderLater().then((tripId) {
+              if (tripId != null) {
+                showToast('Order berhasil', position: ToastPosition.top);
+                Navigator.pushNamedAndRemoveUntil(
+                    context, 'trip', (route) => route.isFirst,
+                    arguments: tripId);
+              } else {
+                showToast('Order gagal');
+              }
+            });
+          },
         ),
       ),
     );

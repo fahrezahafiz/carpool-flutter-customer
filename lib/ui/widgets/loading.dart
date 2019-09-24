@@ -29,7 +29,6 @@ class Loading extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Icon(Icons.error_outline, color: Colors.red, size: 36),
                 UIHelper.vSpaceXSmall(),
                 Text(
                   'Loading...',

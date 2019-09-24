@@ -9,6 +9,7 @@ import 'package:carpool/ui/widgets/finished.dart';
 import 'package:carpool/ui/widgets/on_the_way.dart';
 import 'package:carpool/ui/widgets/loading.dart';
 import 'package:carpool/ui/widgets/waiting_for_approval.dart';
+import 'package:carpool/ui/widgets/booked.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -49,15 +50,20 @@ class TripView extends StatelessWidget {
                     ? Center(child: CircularProgressIndicator())
                     : model.trip.status == TripState.WaitingForApproval
                         ? WaitingForApproval()
-                        : model.trip.status == TripState.Denied
-                            ? Denied()
-                            : model.trip.status == TripState.FindingDriver
-                                ? FindingDriver()
-                                : model.trip.status == TripState.OnTheWay
-                                    ? OnTheWay()
-                                    : model.trip.status == TripState.Finished
-                                        ? Finished()
-                                        : Loading(),
+                        : model.trip.status ==
+                                TripState.WaitingForApprovalBooked
+                            ? Booked()
+                            : model.trip.status == TripState.DeniedByUser ||
+                                    model.trip.status == TripState.DeniedByAdmin
+                                ? Denied()
+                                : model.trip.status == TripState.FindingDriver
+                                    ? FindingDriver()
+                                    : model.trip.status == TripState.OnTheWay
+                                        ? OnTheWay()
+                                        : model.trip.status ==
+                                                TripState.Finished
+                                            ? Finished()
+                                            : Loading(),
                 CustomFAB(
                   child: Icon(Icons.arrow_back),
                   onTap: () => Navigator.pop(context, true),
