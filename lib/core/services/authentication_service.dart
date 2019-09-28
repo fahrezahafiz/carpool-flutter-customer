@@ -13,14 +13,14 @@ class AuthenticationService {
     String email,
     String password,
     String phone,
-    DateTime birth,
+    String company,
   }) async {
     bool registerSuccess = await _api.register(
       name: name,
       email: email,
       password: password,
       phone: phone,
-      birth: birth,
+      company: company,
     );
     return registerSuccess;
   }
@@ -34,7 +34,27 @@ class AuthenticationService {
       print('@AuthService.login: login success. returned $loginSuccess');
       return loginSuccess;
     } else {
+      print('@AuthService.login: login failed. returned $loginSuccess');
       return loginSuccess;
+    }
+  }
+
+  Future<bool> getUserInfo() async {
+    String id = _currentUser.id;
+    User user = await _api.getUserInfo(id);
+    if (user != null) _currentUser = user;
+
+    bool success = user != null;
+    return success;
+  }
+
+  Future<bool> editProfile(String name, String email, String phone) async {
+    User user = await _api.editProfile(currentUser.id, name, email, phone);
+    if (user != null) {
+      _currentUser = user;
+      return true;
+    } else {
+      return false;
     }
   }
 

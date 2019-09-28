@@ -119,13 +119,16 @@ class TripSummaryView extends StatelessWidget {
                         ),
                       ),
                       onTap: () {
-                        model.sendOrder().then((success) {
-                          if (success)
-                            showToast('Order berhasil');
-                          else
+                        model.orderNow().then((tripId) {
+                          if (tripId != null) {
+                            showToast('Order berhasil',
+                                position: ToastPosition.top);
+                            Navigator.pushNamedAndRemoveUntil(
+                                context, 'trip', (route) => route.isFirst,
+                                arguments: tripId);
+                          } else {
                             showToast('Order gagal');
-                          Navigator.of(context)
-                              .popUntil((route) => route.isFirst);
+                          }
                         });
                       },
                     ),

@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:async/async.dart';
+import 'package:carpool/core/models/division.dart';
+import 'package:carpool/core/models/feedback.dart';
 import 'package:carpool/core/models/trip.dart';
 import 'package:carpool/core/models/user.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -140,7 +142,7 @@ class Api {
     String email,
     String password,
     String phone,
-    DateTime birth,
+    String company,
   }) async {
     String url = restApiBaseUrl + 'user/register';
     print(url);
@@ -152,7 +154,7 @@ class Api {
         "email": email,
         "password": password,
         "phone": phone,
-        "birth": birth.toString(),
+        "id_company": company,
       }),
     );
 
@@ -170,13 +172,31 @@ class Api {
     print(url);
     http.Response response = await http.get(url);
 
+    print('@Api.login: status code ${response.statusCode}');
+    print('@Api.login: user object =>');
+    //print(response.body);
     if (response.statusCode == 200) {
       user = User.fromJson(jsonDecode(response.body));
-      print('@Api.login: userId = ${user.id}');
       return user;
     } else {
-      print('Status code: ${response.statusCode}');
       print('@Api.login: Login failed');
+      return null;
+    }
+  }
+
+  Future<User> getUserInfo(String id) async {
+    String url = restApiBaseUrl + 'user?_id=$id';
+    print(url);
+    http.Response response = await http.get(url);
+
+    print('@Api.getUserInfo: status code ${response.statusCode}');
+    print('@Api.getUserInfo: user object =>');
+    print(response.body);
+    if (response.statusCode == 200) {
+      User user = User.fromJson(jsonDecode(response.body));
+      return user;
+    } else {
+      print('@Api.getUserInfo: request failed');
       return null;
     }
   }
@@ -189,45 +209,53 @@ class Api {
     return false;
   }
 
-  Future<User> editProfile(User user, {File image}) async {
+  Future<User> editProfile(
+      String id, String name, String email, String phone) async {
     String url = restApiBaseUrl + 'user/edit';
-    String editImageUrl = restApiBaseUrl + 'user/profile/${user.id}';
+    print(url);
     User changedUser;
+    Map<String, dynamic> changed = {
+      "_id": id,
+      "name": name,
+      "email": email,
+      "phone": phone
+    };
+    print('@Api.editProfile: ${changed['_id']}');
+    print('@Api.editProfile: ${changed['name']}');
 
-    //set profile image
-    if (image != null) {
-      var stream =
-          new http.ByteStream(DelegatingStream.typed(image.openRead()));
-      // get file length
-      var length = await image.length();
-      //create uri
-      var uri = Uri.parse(editImageUrl);
-      // create multipart request
-      var request = new http.MultipartRequest("PUT", uri);
-      // multipart that takes file
-      var multipartFile = new http.MultipartFile(
-          'image_profile', stream, length,
-          filename: basename(image.path));
-      // add file to multipart
-      request.files.add(multipartFile);
-      // send
-      var response = await request.send();
-      print(response.statusCode);
-      // listen for response
-      response.stream.transform(utf8.decoder).listen((value) {
-        print(value);
-      });
-    }
+    http.Response response = await http.put(url,
+        headers: {"Content-Type": 'application/json'},
+        body: jsonEncode(changed));
 
-    http.Response response = await http.put(url, body: user.toJson());
+    print('@Api.editProfile: status code ${response.statusCode}');
+    print('@Api.editProfile: response body =>');
+    print(response.body);
 
     if (response.statusCode == 200) {
       changedUser = User.fromJson(jsonDecode(response.body));
       return changedUser;
     } else {
-      print(
-          '@Api.editProfile: http PUT failed with status code ${response.statusCode}');
       return null;
+    }
+  }
+
+  Future<List<Division>> getDivisions() async {
+    String url = restApiBaseUrl + 'division';
+    List<Division> divisions = List<Division>();
+
+    http.Response response = await http.get(url);
+
+    print('@Api.getDivisions: status code ${response.statusCode}');
+    print('@Api.getDivisions: response body =>');
+    print(response.body);
+
+    if (response.statusCode == 200) {
+      for (var div in jsonDecode(response.body)) {
+        divisions.add(Division.fromJson(div));
+      }
+      return divisions;
+    } else {
+      return [];
     }
   }
 
@@ -259,19 +287,21 @@ class Api {
       return null;
   }
 
-  Future<bool> sendOrder(Trip trip) async {
+  Future<String> sendOrder(Trip trip) async {
     String url = restApiBaseUrl + 'trip/create';
     String encodedTrip = jsonEncode(trip.toJson());
     print(encodedTrip);
     http.Response response = await http.post(url,
         headers: {"Content-Type": 'application/json'}, body: encodedTrip);
 
+    print('@Api.sendOrder: response body =>');
+    print(response.body);
     if (response.statusCode == 200) {
-      print(response.body);
-      return true;
+      Map<String, dynamic> json = jsonDecode(response.body);
+      return json['_id'];
     } else {
       print('@Api.sendOrder: error with status code ${response.statusCode}');
-      return false;
+      return null;
     }
   }
 
@@ -281,6 +311,36 @@ class Api {
     http.Response response = await http.delete(url);
     print(response.body);
     print('@Api.cancelOrder: status code ${response.statusCode}');
+    if (response.statusCode == 200)
+      return true;
+    else
+      return false;
+  }
+
+  Future<bool> sendFeedback(
+      {String idTrip,
+      String idUser,
+      String idDriver,
+      double rating,
+      String message}) async {
+    String url = restApiBaseUrl + 'feedback/create';
+    Map<String, dynamic> feedback = {
+      "id_trip": idTrip,
+      "id_user": idUser,
+      "id_driver": idDriver,
+      "rating": rating,
+      "message": message,
+    };
+    print('@Api.sendFeedback: feedback object =>\n$feedback');
+
+    http.Response response = await http.post(
+      url,
+      headers: {"Content-Type": 'application/json'},
+      body: jsonEncode(feedback),
+    );
+
+    print('@Api.sendFeedback: status code ${response.statusCode}');
+    print(response.body);
     if (response.statusCode == 200)
       return true;
     else

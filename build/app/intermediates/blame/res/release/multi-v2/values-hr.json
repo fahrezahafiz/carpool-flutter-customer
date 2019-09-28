@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values-hr/values-hr.xml",
+            "outputFile": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\app\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-hr\\values-hr.xml",
             "map": [
                 {
-                    "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.0.1.aar/f3250ad54cf0696a92bec9213a979810/res/values-hr/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "190",
-                        "endOffsets": "437"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1275",
-                        "endColumns": "190",
-                        "endOffsets": "1461"
-                    }
-                },
-                {
-                    "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/values-hr/values.xml",
+                    "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-17.0.0.aar\\f710bc6afa2e338befb03118bdfcab42\\res\\values-hr\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.2.aar/de5dbc79f499f283cafeaec2dbf5cb47/res/values-hr/values-hr.xml",
+                    "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-basement-17.0.0.aar\\bd9550e5e2261c42809bb4bdcb77ab84\\res\\values-hr\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "190",
+                        "endOffsets": "437"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1275",
+                        "endColumns": "190",
+                        "endOffsets": "1461"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.2.aar\\04b01ded9a34e1b9918400bf3c1683e0\\res\\values-hr\\values-hr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

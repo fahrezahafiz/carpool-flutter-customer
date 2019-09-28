@@ -1,46 +1,46 @@
 [
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/res/merged/release/drawable-mdpi-v4/googleg_disabled_color_18.png",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable-mdpi-v4/googleg_disabled_color_18.png"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\geolocator\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.2.aar\\04b01ded9a34e1b9918400bf3c1683e0\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/res/merged/release/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\geolocator\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/res/merged/release/drawable-mdpi-v4/notify_panel_notification_icon_bg.png",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.2.aar/de5dbc79f499f283cafeaec2dbf5cb47/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\geolocator\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/res/merged/release/drawable-mdpi-v4/googleg_standard_color_18.png",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable-mdpi-v4/googleg_standard_color_18.png"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\geolocator\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.2.aar\\04b01ded9a34e1b9918400bf3c1683e0\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/res/merged/release/drawable-mdpi-v4/notification_bg_normal.9.png",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.2.aar/de5dbc79f499f283cafeaec2dbf5cb47/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\geolocator\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\googleg_standard_color_18.png",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/res/merged/release/drawable-mdpi-v4/notification_bg_low_pressed.9.png",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.2.aar/de5dbc79f499f283cafeaec2dbf5cb47/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\geolocator\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable-mdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/res/merged/release/drawable-mdpi-v4/notification_bg_normal_pressed.9.png",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.2.aar/de5dbc79f499f283cafeaec2dbf5cb47/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\geolocator\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/res/merged/release/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable-mdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\geolocator\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_normal.9.png",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.2.aar\\04b01ded9a34e1b9918400bf3c1683e0\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/res/merged/release/drawable-mdpi-v4/notification_bg_low_normal.9.png",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/core-1.0.2.aar/de5dbc79f499f283cafeaec2dbf5cb47/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\geolocator\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\googleg_disabled_color_18.png",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-play-services-base-16.0.1.aar\\1bc44ec51dc739e345b621e8adae27a7\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/res/merged/release/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable-mdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\geolocator\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.2.aar\\04b01ded9a34e1b9918400bf3c1683e0\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "/Users/Andhea/Documents/GitHub/carpool-flutter-customer/build/geolocator/intermediates/res/merged/release/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png",
-        "source": "/Users/Andhea/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/b226fc70200deca67cf0f2c9d495765a/res/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
+        "merged": "C:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\geolocator\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\notification_bg_low_normal.9.png",
+        "source": "C:\\Users\\parej\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.2.aar\\04b01ded9a34e1b9918400bf3c1683e0\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
     }
 ]

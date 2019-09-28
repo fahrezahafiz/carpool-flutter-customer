@@ -29,6 +29,7 @@ class PlaceTile extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 12),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Icon(
                 Icons.place,

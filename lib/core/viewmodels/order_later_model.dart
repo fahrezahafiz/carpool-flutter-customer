@@ -1,7 +1,11 @@
+import 'package:carpool/core/models/trip.dart';
 import 'package:carpool/core/viewmodels/base_model.dart';
 import 'package:flutter/material.dart';
+import 'package:carpool/locator.dart';
+import 'package:carpool/core/services/trip_service.dart';
 
 class OrderLaterModel extends BaseModel {
+  TripService _tripService = locator<TripService>();
   DateTime _date = DateTime.now();
   TimeOfDay _time = TimeOfDay.now();
   bool _isDinas = false;
@@ -36,5 +40,18 @@ class OrderLaterModel extends BaseModel {
   void subtractDuration() {
     if (duration > 1) duration--;
     notifyListeners();
+  }
+
+  Future<String> orderLater() async {
+    setBusy(true);
+    DateTime schedule = DateTime(
+        _date.year, _date.month, _date.day, _time.hour, _time.minute, 0, 0, 0);
+    _tripService.currentTrip.schedule = schedule;
+    _tripService.currentTrip.status = TripState.WaitingForApprovalBooked;
+    String tripId = await _tripService.sendOrder();
+    setBusy(false);
+    print(
+        '@OrderLaterModel.orderLater: book later with schedule: ${_tripService.currentTrip.schedule}');
+    return tripId;
   }
 }

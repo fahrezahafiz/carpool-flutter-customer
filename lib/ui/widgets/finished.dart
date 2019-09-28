@@ -2,6 +2,7 @@ import 'package:carpool/core/viewmodels/trip_model.dart';
 import 'package:carpool/ui/shared/compact_button.dart';
 import 'package:carpool/ui/shared/star_rating.dart';
 import 'package:carpool/ui/shared/ui_helper.dart';
+import 'package:oktoast/oktoast.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -28,7 +29,7 @@ class Finished extends StatelessWidget {
             children: <Widget>[
               Text(
                 'Trip finished',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -45,12 +46,51 @@ class Finished extends StatelessWidget {
               ),
             ],
           ),
-          UIHelper.vSpaceXSmall(),
-          Text(
-            'Order ' + trip.id,
-            style: TextStyle(color: Colors.black54),
+          UIHelper.vSpaceSmall(),
+          Center(
+            child: CompactButton(
+              padding: EdgeInsets.all(4),
+              child: Text(
+                'TRIP DETAILS',
+                style:
+                    TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, 'trip_details', arguments: trip);
+              },
+            ),
           ),
-          UIHelper.vSpaceMedium(),
+          UIHelper.vSpaceSmall(),
+          Divider(height: 0),
+          UIHelper.vSpaceSmall(),
+          Row(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 26,
+                backgroundColor: Colors.blueGrey,
+              ),
+              UIHelper.hSpaceSmall(),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      trip.driver.name,
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black87),
+                    ),
+                    Text(
+                      trip.driver.licensePlate,
+                      style: TextStyle(color: Colors.black54),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          UIHelper.vSpaceSmall(),
           Divider(height: 0),
           UIHelper.vSpaceSmall(),
           Center(
@@ -66,79 +106,59 @@ class Finished extends StatelessWidget {
             size: 34,
             color: Colors.orangeAccent,
             starPadding: 4,
-            rating: model.rating,
-            onRatingChanged: (rating) => model.setRating = rating,
+            rating: trip.feedbackSent ? trip.feedback.rating : model.rating,
+            onRatingChanged:
+                trip.feedbackSent ? null : (rating) => model.setRating = rating,
           ),
-          UIHelper.vSpaceMedium(),
-          Divider(height: 0),
           UIHelper.vSpaceSmall(),
-          Row(
-            children: <Widget>[
-              CircleAvatar(
-                radius: 26,
-                backgroundColor: Colors.blueGrey,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4),
+            child: TextField(
+              controller: model.feedbackMessage,
+              enabled: !trip.feedbackSent,
+              decoration: InputDecoration(
+                contentPadding: EdgeInsets.all(12),
+                hintText: 'What do you think of the driver?',
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
               ),
-              UIHelper.hSpaceSmall(),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      trip.driverName,
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87),
-                    ),
-                    Text(
-                      trip.licensePlate,
-                      style: TextStyle(color: Colors.black54),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          UIHelper.vSpaceSmall(),
-          Divider(height: 0),
-          UIHelper.vSpaceSmall(),
-          Text('TRIP DETAILS',
-              style: TextStyle(
-                  fontWeight: FontWeight.bold, color: Colors.black45)),
-          PlaceTile(
-            name: trip.origin.name,
-            address: trip.origin.formattedAddress,
-            leadingIconColor: Colors.blueAccent,
-          ),
-          Expanded(
-            child: ListView(
-              children: trip.destinations
-                  .map(
-                    (dest) => PlaceTile(
-                      name: dest.name,
-                      address: dest.formattedAddress,
-                      leadingIconColor: Colors.red,
-                    ),
-                  )
-                  .toList(),
+              maxLength: 100,
+              maxLines: 3,
+              onChanged: (val) => model.feedbackMessage.text = val,
+              textInputAction: TextInputAction.done,
             ),
           ),
+          // ignore: sdk_version_ui_as_code
+          if (!trip.feedbackSent)
+            Center(
+              child: model.isBusy
+                  ? CircularProgressIndicator()
+                  : RaisedButton(
+                      color: Colors.green,
+                      elevation: 0,
+                      highlightElevation: 1,
+                      child: Text(
+                        'Submit',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.white),
+                      ),
+                      onPressed: model.rating == 0
+                          ? null
+                          : () async {
+                              bool sendSuccess = await model.sendFeedback();
+                              if (sendSuccess) {
+                                showToast('Feedback berhasil dikirim');
+                              } else {
+                                showToast('Gagal mengirim feedback');
+                              }
+                            },
+                    ),
+            ),
+          UIHelper.vSpaceSmall(),
+          Divider(height: 0),
+          UIHelper.vSpaceSmall(),
         ],
       ),
     );
   }
 }
-
-//Center(
-//child: RaisedButton(
-//padding: EdgeInsets.all(10),
-//elevation: 0,
-//highlightElevation: 1,
-//color: Colors.green,
-//child: Text(
-//'Submit',
-//style: TextStyle(fontSize: 16, color: Colors.white),
-//),
-//onPressed: () {},
-//),
-//),

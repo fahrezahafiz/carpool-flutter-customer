@@ -16,6 +16,17 @@ class RootModel extends BaseModel {
   AuthState get state => _state;
   User get currentUser => _authService.currentUser;
   String get errorMessage => _errorMessage;
+  String get getTotalDistance {
+    double km = currentUser.totalDistance / 1000;
+    return km.toStringAsFixed(1) + ' km';
+  }
+
+  String get getTotalTime {
+    int timeInMinutes = currentUser.totalTime ~/ 60;
+    int hours = timeInMinutes ~/ 60;
+    int minutes = timeInMinutes % 60;
+    return '$hours' + 'h' + ' $minutes' + 'm';
+  }
 
   Future<void> init() async {
     SharedPreferences _pref = await SharedPreferences.getInstance();
@@ -30,6 +41,12 @@ class RootModel extends BaseModel {
       print(
           '@AuthService.initialCheck: no login creds found. onto RegisterView.');
     }
+    notifyListeners();
+  }
+
+  Future<void> getUserInfo() async {
+    print('@RootModel.getUserInfo: getting user info');
+    await _authService.getUserInfo();
     notifyListeners();
   }
 

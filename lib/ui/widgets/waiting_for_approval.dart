@@ -30,7 +30,7 @@ class WaitingForApproval extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  'Waiting for approval...',
+                  'Waiting for approval',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
                 UIHelper.vSpaceSmall(),

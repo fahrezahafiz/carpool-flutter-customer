@@ -8,6 +8,7 @@ class OnTheWay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final model = Provider.of<TripModel>(context);
+    final trip = model.trip;
     return Align(
       alignment: Alignment.bottomCenter,
       child: Wrap(
@@ -46,14 +47,20 @@ class OnTheWay extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            model.trip.licensePlate,
+                            trip.driver.licensePlate,
                             style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black87),
                           ),
                           Text(
-                            model.trip.driverName,
+                            trip.driver.vehicleName,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black87),
+                          ),
+                          Text(
+                            trip.driver.name,
                             style: TextStyle(color: Colors.black54),
                           ),
                         ],
@@ -70,7 +77,10 @@ class OnTheWay extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.blue, fontWeight: FontWeight.bold),
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, 'trip_details',
+                          arguments: trip);
+                    },
                   ),
                 )
               ],

@@ -44,6 +44,22 @@ class PickOriginView extends StatelessWidget {
                 alignment: Alignment.topRight,
                 child: Icon(Icons.my_location, color: Colors.blueAccent),
                 onTap: () => model.moveToUserLocation(),
+              ),
+              Align(
+                alignment: Alignment.topCenter,
+                child: Card(
+                  elevation: 4,
+                  margin: EdgeInsets.all(10),
+                  shape: StadiumBorder(),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                    child: Text(
+                      model.category.toUpperCase(),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.black54),
+                    ),
+                  ),
+                ),
               )
             ],
           ),

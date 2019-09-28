@@ -19,12 +19,12 @@ class MyApp extends StatelessWidget {
     return OKToast(
       position: ToastPosition(align: Alignment.bottomCenter),
       textPadding: EdgeInsets.all(14),
-      textStyle: TextStyle(fontFamily: 'Nunito'),
-      backgroundColor: Colors.black54,
+      textStyle: TextStyle(fontFamily: 'Nunito', color: Colors.black54),
+      backgroundColor: Colors.white70,
       radius: 100,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Carpool',
         theme: ThemeData(
           appBarTheme: AppBarTheme(
             color: Colors.white,

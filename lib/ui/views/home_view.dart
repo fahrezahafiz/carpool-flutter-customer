@@ -77,26 +77,33 @@ class HomeTabView extends StatelessWidget {
     return ListView(
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 60),
       children: <Widget>[
-        Text(
-          'Carpool',
-          style: TextStyle(
-              color: Colors.blueGrey,
-              fontSize: 40,
-              fontWeight: FontWeight.bold),
+        Row(
+          children: <Widget>[
+            Image.asset('images/sigma.png', width: 50),
+            UIHelper.hSpaceSmall(),
+            Text(
+              'Carpool',
+              style: TextStyle(
+                  color: Colors.blueGrey,
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold),
+            ),
+          ],
         ),
-        UIHelper.vSpaceSmall(),
+        UIHelper.vSpaceMedium(),
         Row(
           children: <Widget>[
             Expanded(
                 child: MenuCard(
               'Sedan VIP',
-              color: Colors.amber,
+              image: 'images/sedan.png',
               onTap: () => Navigator.pushNamed(context, 'pick_destination',
                   arguments: 'sedan'),
             )),
             Expanded(
                 child: MenuCard(
-              'MPV',
+              'MPV VIP',
+              image: 'images/mpv-vip.png',
               onTap: () => Navigator.pushNamed(context, 'pick_destination',
                   arguments: 'mpvvip'),
             )),
@@ -106,13 +113,15 @@ class HomeTabView extends StatelessWidget {
           children: <Widget>[
             Expanded(
                 child: MenuCard(
-              'MPV Pool',
+              'MPV',
+              image: 'images/mpv-pool.png',
               onTap: () => Navigator.pushNamed(context, 'pick_destination',
                   arguments: 'mpvstandard'),
             )),
             Expanded(
                 child: MenuCard(
               'Minibus',
+              image: 'images/minibus.png',
               onTap: () => Navigator.pushNamed(context, 'pick_destination',
                   arguments: 'minibus'),
             )),
@@ -127,26 +136,37 @@ class MenuCard extends StatelessWidget {
   final String title;
   final Color color;
   final VoidCallback onTap;
+  final String image;
 
-  MenuCard(this.title, {this.color = Colors.black54, this.onTap});
+  MenuCard(this.title,
+      {this.color = Colors.black54,
+      this.onTap,
+      this.image = 'images/sedan.png'});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
         Card(
-          elevation: 2,
+          margin: EdgeInsets.all(8),
+          color: Colors.grey[200],
+          elevation: 4,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
           child: AspectRatio(
             aspectRatio: 1,
             child: Center(
-                child: Text(
-              title,
-              style: TextStyle(
-                fontSize: 18,
-                color: color,
-              ),
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image.asset(image, height: 36),
+                UIHelper.vSpaceSmall(),
+                Text(
+                  title,
+                  style: TextStyle(
+                      fontSize: 18, color: color, fontWeight: FontWeight.bold),
+                ),
+              ],
             )),
           ),
         ),

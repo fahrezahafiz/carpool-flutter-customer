@@ -17,6 +17,7 @@ class PickDestinationModel extends BaseModel {
   List<LocationResult> get destinations => _tripService.destinations;
   Set<Marker> get markers => _tripService.markers;
   PanelController get panelController => _panelController;
+  String get category => _tripService.currentTrip.category;
 
   set setMapController(GoogleMapController controller) {
     _tripService.setMapController = controller;

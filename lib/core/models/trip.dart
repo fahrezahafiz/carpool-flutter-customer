@@ -1,16 +1,26 @@
+import 'dart:convert';
+
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:place_picker/place_picker.dart';
+import 'package:carpool/core/models/feedback.dart';
+import 'package:carpool/core/models/driver.dart';
 
-enum TripState { WaitingForApproval, FindingDriver, OnTheWay, Finished }
+enum TripState {
+  WaitingForApproval,
+  WaitingForApprovalBooked,
+  DeniedByUser,
+  DeniedByAdmin,
+  FindingDriver,
+  OnTheWay,
+  Finished
+}
 
 class Trip {
   String _id;
-  String driverId;
-  String driverName;
-  String licensePlate;
+  Driver driver;
   List<Map<String, dynamic>> users;
   TripState status;
-  String category;
+  String _category;
   LocationResult origin;
   List<LocationResult> destinations;
   DateTime schedule;
@@ -22,20 +32,25 @@ class Trip {
   DateTime createdAt;
   int code;
   int nearbyDrivers;
+  Feedback feedback;
+  bool feedbackSent;
 
   Trip(String category)
       : destinations = [],
         users = [],
-        this.category = category,
+        this._category = category,
         isPrivate = category == 'sedan';
 
   String get id => _id;
+  String get category => _getCategory();
+  String get distanceText => _getDistanceText();
+  String get timeText => _getTimeText();
 
   Trip.fromJson(Map<String, dynamic> json) {
     this._id = json['_id'];
-    this.driverId = json['driver']['id'];
-    this.driverName = json['driver']['name'];
-    this.licensePlate = json['driver']['license_plate'];
+    if (json['driver'] != null) {
+      this.driver = Driver.fromTrip(json['driver']);
+    }
     this.users = List<Map<String, dynamic>>();
     for (var user in json['users']) {
       this.users.add(user);
@@ -43,6 +58,15 @@ class Trip {
     switch (json['status']) {
       case 'WAITING_FOR_APPROVAL':
         this.status = TripState.WaitingForApproval;
+        break;
+      case 'WAITING_FOR_APPROVAL_BOOKED':
+        this.status = TripState.WaitingForApprovalBooked;
+        break;
+      case 'DENIED_BY_USER':
+        this.status = TripState.DeniedByUser;
+        break;
+      case 'DENIED_BY_ADMIN':
+        this.status = TripState.DeniedByAdmin;
         break;
       case 'FINDING_DRIVER':
         this.status = TripState.FindingDriver;
@@ -54,14 +78,13 @@ class Trip {
         this.status = TripState.Finished;
         break;
     }
-    this.category = json['category'];
+    this._category = json['category'];
     this.origin = _locationResultFromJson(json['origin']);
     this.destinations = List<LocationResult>();
     for (var dest in json['destination']) {
       this.destinations.add(_locationResultFromJson(dest));
     }
-    this.schedule =
-        DateTime.fromMillisecondsSinceEpoch(json['schedule'] * 1000);
+    this.schedule = DateTime.parse(json['schedule']);
     int totalTimeInt = json['total_time'];
     this.totalTime = totalTimeInt.toDouble();
     int totalDistanceInt = json['total_distance'];
@@ -70,12 +93,17 @@ class Trip {
     this.createdAt = DateTime.parse(json['created_at']);
     this.code = json['code'];
     this.nearbyDrivers = json['nearby_drivers'];
+    this.feedback = Feedback.fromJson(json['feedback']);
+    print('@Trip.fromJson: feedback on trip =>\n');
+    print(jsonEncode(feedback));
+    this.feedbackSent = this.feedback.message.isNotEmpty;
+    print('@Trip.fromJson: feedbackSent ? $feedbackSent');
   }
 
   Map<String, dynamic> toJson() => {
         'users': users,
-        //'status_trip': tripStateToString(status),
-        'category': category,
+        'status': tripStateToString(status),
+        'category': _category,
         'origin': _locationResultToJson(origin),
         'destination': destinations.map((dest) {
           return _locationResultToJson(dest);
@@ -110,6 +138,12 @@ class Trip {
     switch (state) {
       case TripState.WaitingForApproval:
         return 'WAITING_FOR_APPROVAL';
+      case TripState.WaitingForApprovalBooked:
+        return 'WAITING_FOR_APPROVAL_BOOKED';
+      case TripState.DeniedByUser:
+        return 'DENIED_BY_USER';
+      case TripState.DeniedByAdmin:
+        return 'DENIED_BY_ADMIN';
       case TripState.FindingDriver:
         return 'FINDING_DRIVER';
       case TripState.OnTheWay:
@@ -133,5 +167,31 @@ class Trip {
       }
     };
     return json;
+  }
+
+  String _getDistanceText() {
+    double distanceInKm = totalDistance / 1000;
+    return distanceInKm.toStringAsFixed(1) + ' km';
+  }
+
+  String _getTimeText() {
+    double durationInMins = totalTime / 60;
+    return durationInMins.round().toString() + ' mins';
+  }
+
+  String _getCategory() {
+    print('@Trip: _category = $_category');
+    switch (_category) {
+      case 'sedan':
+        return 'Sedan';
+      case 'mpvstandard':
+        return 'MPV';
+      case 'mpvvip':
+        return 'MPV VIP';
+      case 'minibus':
+        return 'Minibus';
+      default:
+        return 'Unkown category';
+    }
   }
 }
