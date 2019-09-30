@@ -1,8 +1,11 @@
+import 'package:carpool/core/models/company.dart';
+import 'package:carpool/core/models/division.dart';
 import 'package:carpool/core/viewmodels/register_model.dart';
 import 'package:carpool/ui/shared/compact_button.dart';
 import 'package:carpool/ui/shared/ui_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:carpool/ui/views/base_view.dart';
+import 'package:oktoast/oktoast.dart';
 
 class RegisterView extends StatefulWidget {
   @override
@@ -15,6 +18,7 @@ class _RegisterViewState extends State<RegisterView> {
   @override
   Widget build(BuildContext context) {
     return BaseView<RegisterModel>(
+      onModelReady: (model) => model.init(),
       builder: (context, model, child) => Scaffold(
         body: Form(
           key: _formKey,
@@ -99,19 +103,38 @@ class _RegisterViewState extends State<RegisterView> {
                       ),
                       UIHelper.vSpaceXSmall(),
                       DropdownButtonFormField(
-                        items: ['PERTAMINA', 'SCU'].map((String company) {
+                        items: model.companies.map((Company company) {
                           return DropdownMenuItem(
                             value: company,
-                            child: Text(company),
+                            child: Text(company.name),
                           );
                         }).toList(),
-                        onChanged: (selected) => model.setCompany = selected,
+                        onChanged: (Company selected) =>
+                            model.setCompany = selected,
                         value: model.company,
                         decoration: InputDecoration(
                           contentPadding: EdgeInsets.all(18),
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(18)),
                           labelText: 'Perusahaan',
+                        ),
+                      ),
+                      UIHelper.vSpaceXSmall(),
+                      DropdownButtonFormField(
+                        items: model.divisions.map((Division division) {
+                          return DropdownMenuItem(
+                            value: division,
+                            child: Text(division.name),
+                          );
+                        }).toList(),
+                        onChanged: (Division selected) =>
+                            model.setDivision = selected,
+                        value: model.division,
+                        decoration: InputDecoration(
+                          contentPadding: EdgeInsets.all(18),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(18)),
+                          labelText: 'Divisi',
                         ),
                       ),
                       UIHelper.vSpaceMedium(),
@@ -138,7 +161,12 @@ class _RegisterViewState extends State<RegisterView> {
                                 if (form.validate()) {
                                   model.register().then((success) {
                                     print('@RegisterView: success ? $success');
-                                    if (success) Navigator.pop(context, true);
+                                    if (success) {
+                                      showToast('Register berhasil');
+                                      Navigator.pop(context, true);
+                                    } else {
+                                      showToast('Register gagal');
+                                    }
                                   });
                                 }
                               },

@@ -1,3 +1,5 @@
+import 'package:carpool/core/models/company.dart';
+import 'package:carpool/core/models/division.dart';
 import 'package:carpool/core/services/api.dart';
 import 'package:carpool/core/viewmodels/base_model.dart';
 import 'package:carpool/locator.dart';
@@ -11,25 +13,29 @@ class RegisterModel extends BaseModel {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
   TextEditingController phone = TextEditingController();
-  DateTime _birth;
-  String _company;
+  List<Company> companies = List<Company>();
+  Company _company;
+  List<Division> divisions = List<Division>();
+  Division _division;
 
-  String dummyValue = 'test';
-  List<String> dummy = ['kips', 'hilmy', 'ican'];
+  Company get company => _company;
+  Division get division => _division;
 
-  String get birth =>
-      _birth == null ? null : _birth.toString().substring(0, 10);
-  String get company => _company;
-
-  set setBirth(DateTime birthDate) {
-    _birth = birthDate;
+  set setCompany(Company company) {
+    _company = company;
     notifyListeners();
   }
 
-  set setCompany(String newCompany) {
-    _company = newCompany;
-    print('current company = $_company');
+  set setDivision(Division division) {
+    _division = division;
     notifyListeners();
+  }
+
+  Future<void> init() async {
+    setBusy(true);
+    companies = await _api.getCompanies();
+    divisions = await _api.getDivisions();
+    setBusy(false);
   }
 
   Future<bool> register() async {
@@ -39,7 +45,8 @@ class RegisterModel extends BaseModel {
       email: email.text,
       password: password.text,
       phone: phone.text,
-      company: _company,
+      company: _company.idCompany,
+      division: _division.idDivision,
     );
     setBusy(false);
     print('@RegisterModel.register: registerSuccess ? $registerSuccess');

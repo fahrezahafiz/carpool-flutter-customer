@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:async/async.dart';
+import 'package:carpool/core/models/company.dart';
 import 'package:carpool/core/models/division.dart';
 import 'package:carpool/core/models/feedback.dart';
 import 'package:carpool/core/models/trip.dart';
@@ -137,13 +138,13 @@ class Api {
 
   //WEB SERVICES
 
-  Future<bool> register({
-    String name,
-    String email,
-    String password,
-    String phone,
-    String company,
-  }) async {
+  Future<bool> register(
+      {String name,
+      String email,
+      String password,
+      String phone,
+      String company,
+      String division}) async {
     String url = restApiBaseUrl + 'user/register';
     print(url);
     http.Response response = await http.post(
@@ -155,14 +156,16 @@ class Api {
         "password": password,
         "phone": phone,
         "id_company": company,
+        "id_division": division,
       }),
     );
 
     print('@Api.register: register status code ${response.statusCode}');
-    if (response.statusCode == 200)
+    if (response.statusCode == 200) {
       return true;
-    else
+    } else {
       return false;
+    }
   }
 
   Future<User> login(String email, String password) async {
@@ -236,6 +239,26 @@ class Api {
       return changedUser;
     } else {
       return null;
+    }
+  }
+
+  Future<List<Company>> getCompanies() async {
+    String url = restApiBaseUrl + 'companies';
+    List<Company> companies = List<Company>();
+
+    http.Response response = await http.get(url);
+
+    print('@Api.getCompanies: status code ${response.statusCode}');
+    print('@Api.getCompanies: response body =>');
+    print(response.body);
+
+    if (response.statusCode == 200) {
+      for (var cmp in jsonDecode(response.body)) {
+        companies.add(Company.fromJson(cmp));
+      }
+      return companies;
+    } else {
+      return [];
     }
   }
 
