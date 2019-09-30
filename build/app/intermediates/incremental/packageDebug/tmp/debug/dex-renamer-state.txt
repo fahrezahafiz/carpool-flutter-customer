@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 #Fri Sep 27 06:53:20 ICT 2019
+=======
+<<<<<<< HEAD
+#Sun Sep 01 12:35:13 ICT 2019
+base.0=C\:\\Users\\Matoa\\Documents\\GitHub\\carpool-flutter-customer\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+=======
+#Wed Sep 25 23:44:03 ICT 2019
+>>>>>>> b098e1cb0a6869c987fe206a93fa07e26edfa0d3
 base.0=C\:\\Users\\parej\\Documents\\GitHub\\carpool-flutter-customer\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+>>>>>>> b355f6f1c3936d592ba4bc1419ced6353aae0f3e
 path.0=classes.dex
 renamed.0=classes.dex
