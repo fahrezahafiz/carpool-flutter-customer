@@ -161,6 +161,8 @@ class Api {
     );
 
     print('@Api.register: register status code ${response.statusCode}');
+    print('@Api.register: response body =>');
+    print(response.body);
     if (response.statusCode == 200) {
       return true;
     } else {
